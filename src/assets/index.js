@@ -1,5 +1,6 @@
 import logo from './logo.png';
 import astro from './astro.png';
+import albonyan from './company/albonyan.png';
 
 import css from './tech/css.png';
 import git from './tech/git.png';
@@ -9,4 +10,15 @@ import mongodb from './tech/mongodb.png';
 import nodejs from './tech/nodejs.png';
 import reactjs from './tech/reactjs.png';
 
-export { logo, astro, css, git, html, javascript, mongodb, nodejs, reactjs };
+export {
+  logo,
+  astro,
+  albonyan,
+  css,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
+  reactjs,
+};

@@ -36,8 +36,8 @@ const Navbar = () => {
               <li
                 key={link.id}
                 className={`${
-                  active === link.title ? 'text-blue-500' : 'text-secondary'
-                } hover:text-blue-500 text-[18px] font-medium cursor-pointer`}
+                  active === link.title ? 'text-tertiary' : 'text-secondary'
+                } hover:text-tertiary text-[18px] font-medium cursor-pointer`}
                 onClick={() => setActive(link.title)}
               >
                 <a href={`#${link.id}`}>{link.title}</a>
@@ -53,8 +53,8 @@ const Navbar = () => {
               <li
                 key={link.id}
                 className={`${
-                  active === link.title ? 'text-blue-500' : 'text-secondary'
-                } hover:text-blue-500 text-[18px] font-medium cursor-pointer`}
+                  active === link.title ? 'text-tertiary' : 'text-secondary'
+                } hover:text-tertiary text-[18px] font-medium cursor-pointer`}
                 onClick={() => {
                   setActive(link.title);
                   toggleNav();
@@ -64,9 +64,6 @@ const Navbar = () => {
               </li>
             ))}
           </MobNav>
-          {/* <button className="cursor-pointer text-blue-500 text-[20px]">
-            <ion-icon name="menu-outline "></ion-icon>
-          </button> */}
         </div>
       </div>
     </nav>

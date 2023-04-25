@@ -55,6 +55,16 @@ const tech = [
   },
 ];
 
+const experience = {
+  topics: [
+    'Programming Foundation, Git & Github',
+    'HTML, CSS & JS(ES6)',
+    'React JS, Node JS, MongoDB',
+    'AWS & Serverless Functions',
+  ],
+  tasks: ['HTML & CSS', 'Javascript', 'React JS', 'Node JS'],
+};
+
 // const experiences = [
 //   {
 //     title: 'React.js Developer',
@@ -203,4 +213,4 @@ const tech = [
 //   },
 // ];
 
-export { tech };
+export { tech, experience };

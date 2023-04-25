@@ -250,7 +250,7 @@
   height: 2.8px;
   background-color: #a06be6;
   border-radius: 4px;
-  transition: 0.25s;
+  transition: 0.3s;
 }
 
 .menu-btn span:nth-child(1) {
@@ -282,7 +282,7 @@
 }
 
 .backdrop {
-  transition: 0.25s;
+  transition: 0.3s;
 }
 
 .backdrop.active {
@@ -310,7 +310,7 @@
   justify-content: center;
   padding-right: 8rem;
   box-shadow: -10px 0px 30px -15px #2e0a5eaf;
-  transition: 0.25s;
+  transition: 0.3s ease-out;
 }
 
 .mob-nav.active {
@@ -324,7 +324,7 @@
   color: #a06be6;
   border-radius: 3px;
   border: 1px solid #a06be6;
-  transition: 0.25s;
+  transition: 0.3s;
 }
 
 .cta:hover {
@@ -408,4 +408,46 @@
   100% {
     transform: translateX(-100%);
   }
+}
+
+/*  Experience */
+.exp a::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  background-color: #a06be6;
+  transition: 0.3s ease-in;
+}
+
+.exp a:hover::after {
+  width: 100%;
+}
+
+.hero-list li::before {
+  content: '▹';
+  display: block;
+  position: absolute;
+  left: -28px;
+  top: -4px;
+  color: #a06be6;
+  font-size: 20px;
+}
+
+.exp .desc li::before {
+  content: '▹';
+  display: block;
+  position: absolute;
+  left: -20px;
+  color: #a06be6;
+  font-size: 18px;
+}
+
+.li-span::before {
+  content: '▹';
+  display: block;
+  position: absolute;
+  left: -20px;
+  color: #7585a8;
+  font-size: 18px;
 }
