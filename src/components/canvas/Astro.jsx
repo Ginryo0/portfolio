@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unknown-property */
-import React, { Suspense, useEffect, useState } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import useMobileMedia from '../../hooks/useMobileMedia';
+import CanvasLoader from '../CanvasLoader';
 
-const Astro = ({ isMobile }) => {
+const Astro = () => {
   const astro = useGLTF('./astro/scene.gltf');
+  const isMobile = useMobileMedia();
 
   return (
     <mesh>
@@ -27,28 +30,6 @@ const Astro = ({ isMobile }) => {
 };
 
 const AstroCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Listen for changes of screen size
-    const mediaQuery = window.matchMedia('(max-width: 800px)');
-
-    // Set initial value of 'isMobile' state
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to media query
-    const handleMediaChange = (ev) => {
-      setIsMobile(ev.matches);
-    };
-
-    // Add the callback function to handle changes
-    mediaQuery.addEventListener('change', handleMediaChange);
-
-    // Clear event listener
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaChange);
-    };
-  }, []);
   return (
     <Canvas
       frameloop="demand"
@@ -57,16 +38,16 @@ const AstroCanvas = () => {
       camera={{ position: [20, 3, 25], fov: 17 }}
       gl={{ preserveDrawingBufferSize: true }}
     >
-      {/* <Suspense fallback={<CanvasLoader />}> */}
-      <OrbitControls
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-        autoRotate
-        autoRotateSpeed={-3}
-      />
-      <Astro isMobile={isMobile} />
-      {/* </Suspense> */}
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+          autoRotate
+          autoRotateSpeed={-3}
+        />
+        <Astro />
+      </Suspense>
     </Canvas>
   );
 };

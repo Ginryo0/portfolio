@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 import { slideIn, textVariant } from '../utils/motion';
@@ -8,19 +7,21 @@ import { astro } from '../assets';
 import { tech } from '../constants';
 
 const Tech = () => {
-  const variant = "slideIn('right', 'ease-in', 0, 0.3)";
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>Tools</p>
         <h2 className={styles.sectionHeadText}>Tech</h2>
+      </motion.div>
+      <motion.div variants={slideIn('right', 'spring', 0.2, 2)}>
         <div className="tech-head mb-5">
           <div className="roll-bar">
             {tech.map((item) => {
               return (
                 <p
                   key={item.name}
-                  className={`${styles.sectionSubText} text-tertiary font-para`}
+                  className={`${styles.sectionSubText} font-para`}
+                  style={{ color: item.color }}
                 >
                   {item.name}
                 </p>
@@ -49,5 +50,5 @@ const Tech = () => {
 export default SectionWrapper(
   Tech,
   'tech',
-  ' max-w-xl w-1/2 text-center h-full flex flex-col items-center justify-center'
+  'w-full text-center h-full flex flex-col items-center justify-center overflow-x-hidden'
 );

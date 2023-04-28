@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { AstroCanvas } from './canvas';
 import CTABtn from './mobnav/CTABtn';
@@ -7,14 +7,14 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start mt-5 justify-start z-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start lg:mt-20 mt-10 justify-start z-5`}
       >
-        <CTABtn className="mt-10 ml-10 lg:text-[31.25px] min-[1169px]:top-[14rem] lg:top-[15rem] sm:left-[2rem] sm:text-[25px] sm:top-[17rem] min-[850px]:top-[14rem]  xs:text-[16px] xs:top-[12rem] xs:left-[0rem] z-20 absolute   px-8 py-2 cta-big " />
+        <CTABtn className="mt-10 ml-10 lg:text-[31.25px]  sm:text-[25px] xs:text-[16px] min-[900px]:top-[14rem] min-[724px]:top-[16rem] sm:top-[18rem] sm:left-[2rem] xs:top-[12rem] top-[12.4rem] left-[0rem] z-20 absolute px-8 py-2 cta-big " />
         <div className="w-1 sm:h-40 h-28 blue-gradient mt-2 mr-5"></div>
         <div className={`w-50`}>
-          <h5 className={`${styles.heroSubText} text-secondary`}>Hi, I'm</h5>
-          <h1 className={`${styles.heroHeadText}   mb-5`}>Ahmed Zeid</h1>
-          <h2 className={`${styles.heroSubHead} text-white-100 mb-4`}>
+          <h5 className={`${styles.heroSubText} -mb-[4px]`}>Hi, I'm</h5>
+          <h1 className={`${styles.heroHeadText}`}>Ahmed Zeid</h1>
+          <h2 className={`${styles.heroSubHead} `}>
             I Launch Your <span className="text-tertiary">Web </span>Dreams to
             the <span className="text-tertiary">Stars</span>.
           </h2>
@@ -31,7 +31,26 @@ const Hero = () => {
           </ul>
         </div>
       </div>
+
       <AstroCanvas />
+
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+        <a href="#about">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white-200 flex justify-center items-start p-2">
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: 'loop',
+              }}
+              className="w-2 h-2 rounded-full bg-white-200 mb-1"
+            />
+          </div>
+        </a>
+      </div>
     </section>
   );
 };

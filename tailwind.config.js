@@ -9,10 +9,9 @@ module.exports = {
         primary: '#050f24',
         secondary: '#fff',
         tertiary: '#A06BE6',
-        'black-100': '#02060e',
-        'black-200': '#010307',
-        'white-100': '#fff',
-        'white-200': '#7585A8',
+        lighter: '#0b1937',
+        'white-200': '#919FBA',
+        'white-300': '#7585A8',
       },
       fontFamily: {
         para: ['"Titillium Web"', 'sans-serif'],

@@ -1,11 +1,10 @@
-import React from 'react';
 import { logo } from '../assets';
 
 const Loader = () => {
   return (
-    <div className="relative- bg-primary w-full h-screen">
+    <div className="fixed bg-primary w-full h-screen z-50 flex items-center justify-center">
       <div className="loader">
-        <img src={logo} alt="loader" />
+        <img src={logo} alt="loader" className="w-10 h-10" />
       </div>
     </div>
   );

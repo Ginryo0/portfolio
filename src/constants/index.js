@@ -6,6 +6,9 @@ import {
   nodejs,
   mongodb,
   git,
+  jobify,
+  appie,
+  breakout,
 } from '../assets';
 
 export const navLinks = [
@@ -27,31 +30,38 @@ const tech = [
   {
     name: 'HTML 5',
     icon: html,
+    color: '#ff6d00',
   },
   {
     name: 'CSS 3',
     icon: css,
+    color: '#039be5',
   },
   {
     name: 'JavaScript',
     icon: javascript,
+    color: '#ffd600',
   },
   {
     name: 'React JS',
     icon: reactjs,
+    color: '#53c1de',
   },
 
   {
     name: 'Node JS',
     icon: nodejs,
+    color: '#21a366',
   },
   {
     name: 'MongoDB',
     icon: mongodb,
+    color: '#4caf50',
   },
   {
     name: 'git',
     icon: git,
+    color: '#f4511e',
   },
 ];
 
@@ -65,152 +75,114 @@ const experience = {
   tasks: ['HTML & CSS', 'Javascript', 'React JS', 'Node JS'],
 };
 
-// const experiences = [
-//   {
-//     title: 'React.js Developer',
-//     company_name: 'Starbucks',
-//     icon: starbucks,
-//     iconBg: '#383E56',
-//     date: 'March 2020 - April 2021',
-//     points: [
-//       'Developing and maintaining web applications using React.js and other related technologies.',
-//       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-//       'Implementing responsive design and ensuring cross-browser compatibility.',
-//       'Participating in code reviews and providing constructive feedback to other developers.',
-//     ],
-//   },
-//   {
-//     title: 'React Native Developer',
-//     company_name: 'Tesla',
-//     icon: tesla,
-//     iconBg: '#E6DEDD',
-//     date: 'Jan 2021 - Feb 2022',
-//     points: [
-//       'Developing and maintaining web applications using React.js and other related technologies.',
-//       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-//       'Implementing responsive design and ensuring cross-browser compatibility.',
-//       'Participating in code reviews and providing constructive feedback to other developers.',
-//     ],
-//   },
-//   {
-//     title: 'Web Developer',
-//     company_name: 'Shopify',
-//     icon: shopify,
-//     iconBg: '#383E56',
-//     date: 'Jan 2022 - Jan 2023',
-//     points: [
-//       'Developing and maintaining web applications using React.js and other related technologies.',
-//       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-//       'Implementing responsive design and ensuring cross-browser compatibility.',
-//       'Participating in code reviews and providing constructive feedback to other developers.',
-//     ],
-//   },
-//   {
-//     title: 'Full stack Developer',
-//     company_name: 'Meta',
-//     icon: meta,
-//     iconBg: '#E6DEDD',
-//     date: 'Jan 2023 - Present',
-//     points: [
-//       'Developing and maintaining web applications using React.js and other related technologies.',
-//       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-//       'Implementing responsive design and ensuring cross-browser compatibility.',
-//       'Participating in code reviews and providing constructive feedback to other developers.',
-//     ],
-//   },
-// ];
+const projects = [
+  {
+    name: 'Jobify - Job Tracking App',
+    live: 'https://jobify-gryo.onrender.com/',
+    github: 'https://github.com/Ginryo0/Jobify---MERN-Project',
+    paragraph:
+      'Jobify is a job tracking application built using the MERN (MongoDB, Express, React, Node.js) stack. The app allows users to track the status of their job applications.Jobify is a valuable tool for job seekers looking to streamline their job search process',
+    tools: ['React', 'Express', 'MongoDB'],
+    img: jobify,
+  },
+  {
+    name: 'Appie - Landing Page',
+    live: 'https://appie-gryo.netlify.app/',
+    github: 'https://github.com/Ginryo0/Appie',
+    paragraph: `Appie is a landing page built using HTML and CSS. The page has a clean layout and visually appealing desing. It imitates a word press theme and that was actually my first task at`,
+    inLink: {
+      link: 'https://www.albonyanalmarsos.org/',
+      name: 'Kalbonyan Almarsos',
+    },
+    tools: ['HTML', 'CSS'],
+    img: appie,
+  },
+  {
+    name: 'Breakout Game',
+    live: 'https://breakout-gryo.netlify.app/',
+    github:
+      'https://github.com/Ginryo0/20-Vanilla-Web-Projects/tree/main/Projects/17-Breakout',
+    paragraph:
+      'Breakout is a classic arcade-style game that has been recreated as a web app using HTML, CSS, and JavaScript. I built it using canvas element. It involves controlling a paddle at the bottom of the screen to bounce a ball and break through a wall of bricks at the top of the screen. I added 3 difficulty levels each has different game settings and UI. It was a part of my',
+    inLink: {
+      link: 'https://github.com/Ginryo0/20-Vanilla-Web-Projects/tree/main/Projects',
+      name: '20 Vanilla Web Projects',
+    },
+    tools: ['HTML', 'CSS', 'Javascript'],
+    img: breakout,
+  },
+];
 
-// const testimonials = [
-//   {
-//     testimonial:
-//       'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-//     name: 'Sara Lee',
-//     designation: 'CFO',
-//     company: 'Acme Co',
-//     image: 'https://randomuser.me/api/portraits/women/4.jpg',
-//   },
-//   {
-//     testimonial:
-//       "I've never met a web developer who truly cares about their clients' success like Rick does.",
-//     name: 'Chris Brown',
-//     designation: 'COO',
-//     company: 'DEF Corp',
-//     image: 'https://randomuser.me/api/portraits/men/5.jpg',
-//   },
-//   {
-//     testimonial:
-//       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-//     name: 'Lisa Wang',
-//     designation: 'CTO',
-//     company: '456 Enterprises',
-//     image: 'https://randomuser.me/api/portraits/women/6.jpg',
-//   },
-// ];
+const additionalProjects = [
+  {
+    name: '20 Vanilla Web Projects',
+    github:
+      'https://github.com/Ginryo0/20-Vanilla-Web-Projects/tree/main/Projects',
+    paragraph:
+      'These are 20 Web Applications the focus heavily on Javascript and CSS. They utilize different browser APIs, External APIs, local storage and much more. I really encourage you to give them a look',
+    tools: ['HTML', 'CSS', 'Javascript'],
+  },
 
-// const projects = [
-//   {
-//     name: 'Car Rent',
-//     description:
-//       'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-//     tags: [
-//       {
-//         name: 'react',
-//         color: 'blue-text-gradient',
-//       },
-//       {
-//         name: 'mongodb',
-//         color: 'green-text-gradient',
-//       },
-//       {
-//         name: 'tailwind',
-//         color: 'pink-text-gradient',
-//       },
-//     ],
-//     image: carrent,
-//     source_code_link: 'https://github.com/',
-//   },
-//   {
-//     name: 'Job IT',
-//     description:
-//       'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
-//     tags: [
-//       {
-//         name: 'react',
-//         color: 'blue-text-gradient',
-//       },
-//       {
-//         name: 'restapi',
-//         color: 'green-text-gradient',
-//       },
-//       {
-//         name: 'scss',
-//         color: 'pink-text-gradient',
-//       },
-//     ],
-//     image: jobit,
-//     source_code_link: 'https://github.com/',
-//   },
-//   {
-//     name: 'Trip Guide',
-//     description:
-//       'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-//     tags: [
-//       {
-//         name: 'nextjs',
-//         color: 'blue-text-gradient',
-//       },
-//       {
-//         name: 'supabase',
-//         color: 'green-text-gradient',
-//       },
-//       {
-//         name: 'css',
-//         color: 'pink-text-gradient',
-//       },
-//     ],
-//     image: tripguide,
-//     source_code_link: 'https://github.com/',
-//   },
-// ];
+  {
+    name: 'React Meals',
+    live: 'https://food-order-gryo.netlify.app/',
+    github: 'https://github.com/Ginryo0/ReactMeals',
+    paragraph:
+      'React meals is a food order App built with react. You get 5 dishes you can choose from. You can add any of them to cart, fill a form to place an order',
+    tools: ['React', 'CSS'],
+  },
+  // {
+  //   name: 'Kanban Board',
+  //   live: 'https://kanbanboard-gryo.netlify.app/',
+  //   github: 'https://github.com/Ginryo0/Kanban-Board',
+  //   paragraph:
+  //     'Kanban board is a visual tool used to manage tasks and workflow in a project. This project was built mainly with Javascript. It utilizes drag events, touch events and local storage to ensure a good user experience across different platforms. That was my second task at',
+  //   inLink: {
+  //     link: 'https://www.albonyanalmarsos.org/',
+  //     name: 'Kalbonyan Almarsos',
+  //   },
+  //   tools: ['HTML', 'CSS', 'Javascript'],
+  // },
+  {
+    name: 'Node Shop',
+    live: 'https://node-4y1s.onrender.com/',
+    github: 'https://github.com/Ginryo0/Node-Deployment',
+    paragraph:
+      'This is a shop application that is focused mainly on backend. It has many features including: adding new products, editing and deleting them by admin, shopping cart, integrating stripe for checkout , a PDF invoice for each order and much more',
+    tools: ['Express', 'MongoDB', 'EJS', 'API', 'Stripe'],
+  },
+  {
+    name: 'Omnifood',
+    live: 'https://omnifood-gryo.netlify.app/',
+    github: 'https://github.com/Ginryo0/omnifood',
+    paragraph:
+      'Omnifood is a Landing page for tech company that uses AI to ensure customers eat healthy food',
+    tools: ['HTML', 'CSS'],
+  },
+  // {
+  //   name: 'Social Feed',
+  //   live: 'https://social-feed-gryo.onrender.com/',
+  //   github: 'https://github.com/Ginryo0/Node-Feed',
+  //   paragraph:
+  //     'Social Feed is a full stack project that imitates social media posts. It uses WebSockets to ensure feed posts are always up-to-date',
+  //   tools: ['Express', 'MongoDB', 'WebSockets', 'GraphQl'],
+  // },
+  {
+    name: 'Serverless Functions',
+    live: 'https://serverless-fncs-gryo.netlify.app/',
+    github: 'https://github.com/Ginryo0/Serverless-Functions',
+    paragraph:
+      'This is a project that focuses on AWS Serverless Lambda functions. It includes 8 mini applications like Weather App, Newsletter App and more',
+    tools: ['CSS', 'Javascript', 'AWS Lambda'],
+  },
+  // {
+  //   name: 'Redux Cart',
+  //   live: 'https://redux-cart-gryo.netlify.app/',
+  //   github: 'https://github.com/Ginryo0/ReduxCart',
+  //   paragraph:
+  //     'Redux Cart is a simple cart app that utilizes react redux and firebase to manage and store cart state',
+  //   tools: ['React', 'Redux', 'Firebase'],
+  // },
+];
 
-export { tech, experience };
+export { tech, experience, projects, additionalProjects };

@@ -1,0 +1,28 @@
+.project_card {
+  /* border: 2px solid #a06be6; */
+  background-color: #0b1937;
+  transition: 0.4s ease;
+}
+
+.project_card:hover {
+  transform: translate(-4px, -8px) !important;
+  box-shadow: 6px 6px 0px #a06be6;
+}
+
+.project_card h3 a {
+  transition: 0.4s ease;
+}
+
+.project_card h3 a::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.project_card:hover a {
+  color: #a06be6;
+}

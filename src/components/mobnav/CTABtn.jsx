@@ -1,4 +1,13 @@
 const CTABtn = ({ className }) => {
-  return <button className={`cta ${className}`}>Hire me</button>;
+  return (
+    <a
+      className={`cta ${className}`}
+      href="https://www.linkedin.com/in/ahmed-zeid-106841257/"
+      rel="noreferrer noopener"
+      target="_blank"
+    >
+      Hire me
+    </a>
+  );
 };
 export default CTABtn;
