@@ -12,7 +12,7 @@ const Experience = () => {
         <p className={`${styles.sectionSubText} `}>Where I've worked</p>
         <h2 className={styles.sectionHeadText}>Experience</h2>
       </motion.div>
-      <motion.div variants={slideIn('down', 'spring', 0, 1.5)}>
+      <motion.div variants={slideIn('down', 'tween', 0, 1.5)}>
         <div className="mx-auto">
           <div>
             <img src={albonyan} alt="kalbonyan almarsos" className="w-[80px]" />
