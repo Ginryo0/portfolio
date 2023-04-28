@@ -22,7 +22,16 @@ const About = () => {
           life on the internet.
         </p>
         <p className={styles.sectionText}>
-          I am constantly seeking to improve my skills and knowledge.
+          My technical skills include proficiency in
+          <span className="text-tertiary">
+            {' '}
+            HTML, CSS, JavaScript, React, Node,{' '}
+          </span>
+          and a variety of other modern web development frameworks and tools.
+        </p>
+        <p className={styles.sectionText}>
+          I am constantly seeking to improve my skills and knowledge. I am
+          currently interested in 3D Websites.
         </p>
         <p className={styles.sectionText}>
           With a keen eye for detail and a deep understanding of web development

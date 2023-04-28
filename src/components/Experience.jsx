@@ -37,9 +37,9 @@ const Experience = () => {
             <h4 className={`${styles.sectionH4} mb-8`}>Dec 2022 - Present</h4>
             <ul className="desc flex flex-col gap-4">
               <li className={`${styles.sectionText} relative ml-4`}>
-                This internship aims to build our skills at{' '}
+                This internship aims to develop our skills at{' '}
                 <span className="text-white-300">programming foundation </span>{' '}
-                and <span className="text-white-300">web developement</span>.
+                and <span className="text-white-300">web development</span>.
               </li>
               <li className={`${styles.sectionText} relative ml-4`}>
                 Through this internship I was able to take courses of over
@@ -59,7 +59,7 @@ const Experience = () => {
               <li className={`${styles.sectionText} relative ml-4`}>
                 I also had to do 4
                 <span className="text-white-300"> advanced level </span>tasks by
-                myself each focusing on one of on these topics:{' '}
+                myself each focusing on one of these topics:{' '}
                 <div className="sm:ml-16 ml-10 grid grid-cols-2 gap-1 mt-2">
                   {experience.tasks.map((item) => (
                     <span
