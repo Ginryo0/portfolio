@@ -81,7 +81,7 @@ const projects = [
     live: 'https://jobify-gryo.onrender.com/',
     github: 'https://github.com/Ginryo0/Jobify---MERN-Project',
     paragraph:
-      'Jobify is a job tracking application built using the MERN (MongoDB, Express, React, Node.js) stack. The app allows users to track the status of their job applications.Jobify is a valuable tool for job seekers looking to streamline their job search process',
+      'Jobify is a job tracking application built using the MERN (MongoDB, Express, React, Node.js) stack. The app allows users to track the status of their job applications. Jobify is a valuable tool for job seekers looking to streamline their job search process',
     tools: ['React', 'Express', 'MongoDB'],
     img: jobify,
   },
@@ -89,7 +89,7 @@ const projects = [
     name: 'Appie - Landing Page',
     live: 'https://appie-gryo.netlify.app/',
     github: 'https://github.com/Ginryo0/Appie',
-    paragraph: `Appie is a landing page built using HTML and CSS. The page has a clean layout and visually appealing desing. It imitates a word press theme and that was actually my first task at`,
+    paragraph: `Appie is a landing page built using HTML and CSS. The page has a clean layout and visually appealing design. It imitates a word press theme and It was actually my first task at`,
     inLink: {
       link: 'https://www.albonyanalmarsos.org/',
       name: 'Kalbonyan Almarsos',
@@ -119,7 +119,7 @@ const additionalProjects = [
     github:
       'https://github.com/Ginryo0/20-Vanilla-Web-Projects/tree/main/Projects',
     paragraph:
-      'These are 20 Web Applications the focus heavily on Javascript and CSS. They utilize different browser APIs, External APIs, local storage and much more. I really encourage you to give them a look',
+      'These are 20 Web Applications that focus heavily on Javascript and CSS. They utilize different browser APIs, External APIs, local storage and much more. I really encourage you to give them a look',
     tools: ['HTML', 'CSS', 'Javascript'],
   },
 
@@ -156,7 +156,7 @@ const additionalProjects = [
     live: 'https://omnifood-gryo.netlify.app/',
     github: 'https://github.com/Ginryo0/omnifood',
     paragraph:
-      'Omnifood is a Landing page for tech company that uses AI to ensure customers eat healthy food',
+      'Omnifood is a Landing page for a tech company that uses AI to ensure customers eat healthy food',
     tools: ['HTML', 'CSS'],
   },
   // {

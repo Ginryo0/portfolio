@@ -20,7 +20,7 @@ const Experience = () => {
           <div className="exp">
             <div className="flex sm:gap-1 sm:flex-row sm:items-center sm:mb-2 mt-4 mb-2 flex-col">
               <h3 className={`${styles.sectionH3} mb-0`}>
-                Software Engineer Intern
+                Software Engineering Intern
               </h3>
               <div className="flex gap-1">
                 <p className={`${styles.sectionLink}`}> @ </p>
@@ -42,9 +42,9 @@ const Experience = () => {
                 and <span className="text-white-300">web developement</span>.
               </li>
               <li className={`${styles.sectionText} relative ml-4`}>
-                Through this internship I was able to take courses with over
-                <span className="text-white-300"> 250h </span> of content based
-                on these topics:{' '}
+                Through this internship I was able to take courses of over
+                <span className="text-white-300"> 250h </span> of content on
+                these topics:{' '}
                 <div className="sm:ml-16 ml-10 flex flex-col gap-1 mt-2">
                   {experience.topics.map((item) => (
                     <span
