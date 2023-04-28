@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { AstroCanvas } from './canvas';
 import CTABtn from './mobnav/CTABtn';
+import Socials from './Socials';
 
 const Hero = () => {
   return (
@@ -9,7 +10,10 @@ const Hero = () => {
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start lg:mt-20 mt-10 justify-start z-5`}
       >
-        <CTABtn className="mt-10 ml-10 lg:text-[31.25px]  sm:text-[25px] xs:text-[16px] min-[900px]:top-[14rem] min-[724px]:top-[16rem] sm:top-[18rem] sm:left-[2rem] xs:top-[12rem] top-[12.4rem] left-[0rem] z-20 absolute px-8 py-2 cta-big " />
+        <div className="mt-10 ml-10 lg:text-[31.25px]  sm:text-[25px] xs:text-[16px] min-[900px]:top-[14rem] min-[724px]:top-[16rem] sm:top-[18rem] sm:left-[2rem] xs:top-[12rem] top-[12.4rem] left-[0rem] z-20 absolute flex items-center sm:gap-12 gap-20">
+          <CTABtn className="px-8 py-2 cta-big " />
+          <Socials className="icons_large" />
+        </div>
         <div className="w-1 sm:h-40 h-28 blue-gradient mt-2 mr-5"></div>
         <div className={`w-50`}>
           <h5 className={`${styles.heroSubText} -mb-[4px]`}>Hi, I'm</h5>

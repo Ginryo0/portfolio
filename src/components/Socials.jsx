@@ -1,7 +1,7 @@
 import { Github, Mail, LinkedIn } from './icons';
-const Socials = () => {
+const Socials = ({ className }) => {
   return (
-    <ul className="flex gap-3 items-center sm:ml-0 ml-2">
+    <ul className={`flex gap-3 items-center sm:ml-0 ml-2 ${className}`}>
       <li>
         <a
           href="https://www.linkedin.com/in/ahmed-zeid-106841257/"

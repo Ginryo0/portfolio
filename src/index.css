@@ -71,6 +71,20 @@ html::-webkit-scrollbar-track {
   stroke-width: 1px;
 }
 
+@media (min-width: 450px) {
+  .icons_large .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 640px) {
+  .icons_large .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 /* hash span - navigation */
 .hash-span {
   margin-top: -100px;
@@ -468,4 +482,14 @@ html::-webkit-scrollbar-track {
     opacity: 1;
     /* transform: translateY(400%); */
   }
+}
+
+/* footer */
+.footer {
+  position: absolute;
+  bottom: 2rem;
+  /* left: 50%; */
+  color: #919fba;
+  opacity: 90%;
+  /* transform: translateX(-50%); */
 }

@@ -15,7 +15,7 @@ import {
 
 import { styles } from './styles';
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -46,6 +46,9 @@ const App = () => {
             <div className="relative z-0">
               <Contact />
               <StarsCanvas />
+              <footer className="footer w-full text-center font-medium">
+                &copy; Ahmed Zeid 2023.
+              </footer>
             </div>
           </div>
         </>
