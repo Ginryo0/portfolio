@@ -430,16 +430,18 @@ html::-webkit-scrollbar-track {
 
 /* form alert style */
 .alert {
-  position: absolute;
+  position: fixed;
   top: 0;
-  transform: translateY(-40%);
-  width: 20rem;
-  z-index: 1;
+  left: 0;
+  transform: translateY(400%);
+  width: 100%;
+  z-index: 4;
   border-radius: 2px;
   padding: 1rem;
-  background-color: #050f24;
+  background-color: #050f2463;
+  backdrop-filter: blur(10px);
   opacity: 0;
-  animation: alert 0.5s ease-out 1 forwards;
+  animation: alert 2s ease-out 1 forwards;
 }
 
 .alert_success {
@@ -455,11 +457,15 @@ html::-webkit-scrollbar-track {
 @keyframes alert {
   0% {
     opacity: 0;
-    transform: translateY(-40%);
+    /* transform: translateY(-50%); */
+  }
+
+  70% {
+    opacity: 1;
   }
 
   100% {
-    transform: translateY(50%);
     opacity: 1;
+    /* transform: translateY(400%); */
   }
 }

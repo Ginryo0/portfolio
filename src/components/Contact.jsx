@@ -28,6 +28,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setAlert('success');
+    setTimeout(() => {
+      setAlert('');
+    }, 4000);
+    return;
     if (
       !form.name ||
       !form.email ||
@@ -101,7 +106,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Jhon Doe"
+              placeholder="Gin Ryo"
               className="bg-lighter font-para bg-opacity-50 py-4 px-6 placeholder:text-white-200 text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -112,7 +117,7 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="john@doe.com"
+              placeholder="ahmed@gryo.com"
               className="bg-lighter bg-opacity-50 font-para py-4 px-6 placeholder:text-white-200 text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
