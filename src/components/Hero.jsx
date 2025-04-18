@@ -14,7 +14,7 @@ const Hero = () => {
           <CTABtn className="px-8 py-2 cta-big " />
           <Socials className="icons_large" />
         </div>
-        <div className="w-1 sm:h-40 h-28 blue-gradient mt-2 mr-5"></div>
+        <div className="w-1 mt-2 mr-5 sm:h-40 h-28 blue-gradient"></div>
         <div className={`w-50`}>
           <h5 className={`${styles.heroSubText} -mb-[4px]`}>Hi, I'm</h5>
           <h1 className={`${styles.heroHeadText}`}>Ahmed Zeid</h1>
@@ -24,11 +24,11 @@ const Hero = () => {
           </h2>
 
           <ul className={`${styles.heroSubText} pr-62 hero-list`}>
-            <li className="text-white-200 font-para relative">
+            <li className="relative text-white-200 font-para">
               I am an enthusiastic web developer with a passion for creating
               engaging websites.
             </li>
-            <li className="text-white-200 font-para relative">
+            <li className="relative text-white-200 font-para">
               My goal is to bring the optimal solutions to users and enhance
               their overall browsing experience.
             </li>
@@ -38,7 +38,7 @@ const Hero = () => {
 
       <AstroCanvas />
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <div className="absolute flex items-center justify-center w-full xs:bottom-10 bottom-32">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white-200 flex justify-center items-start p-2">
             <motion.div
@@ -50,7 +50,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
-              className="w-2 h-2 rounded-full bg-white-200 mb-1"
+              className="w-2 h-2 mb-1 rounded-full bg-white-200"
             />
           </div>
         </a>
