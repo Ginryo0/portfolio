@@ -4,7 +4,7 @@ const Socials = ({ className }) => {
     <ul className={`flex gap-3 items-center sm:ml-0 ml-2 ${className}`}>
       <li>
         <a
-          href="https://www.linkedin.com/in/ahmed-zeid-106841257/"
+          href="https://www.linkedin.com/in/ahmed-samy-zeid/"
           rel="noreferrer noopener"
           target="_blank"
         >

@@ -29,7 +29,7 @@ const App = () => {
         <>
           <Navbar />
           <div className="relative z-0 bg-primary">
-            <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+            <div className="bg-center bg-no-repeat bg-cover bg-hero-pattern">
               <Hero />
             </div>
             <div
@@ -46,8 +46,8 @@ const App = () => {
             <div className="relative z-0">
               <Contact />
               <StarsCanvas />
-              <footer className="footer w-full text-center font-medium">
-                &copy; Ahmed Zeid 2023.
+              <footer className="w-full font-medium text-center footer">
+                &copy; Ahmed Zeid {new Date().getFullYear()}
               </footer>
             </div>
           </div>
