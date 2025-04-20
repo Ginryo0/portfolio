@@ -18,7 +18,7 @@ const Experience = () => {
             <img src={albonyan} alt="kalbonyan almarsos" className="w-[80px]" />
           </div>
           <div className="exp">
-            <div className="flex sm:gap-1 sm:flex-row sm:items-center sm:mb-2 mt-4 mb-2 flex-col">
+            <div className="flex flex-col mt-4 mb-2 sm:gap-1 sm:flex-row sm:items-center sm:mb-2">
               <h3 className={`${styles.sectionH3} mb-0`}>
                 Software Engineering Intern
               </h3>
@@ -35,7 +35,7 @@ const Experience = () => {
               </div>
             </div>
             <h4 className={`${styles.sectionH4} mb-8`}>Dec 2022 - Present</h4>
-            <ul className="desc flex flex-col gap-4">
+            <ul className="flex flex-col gap-4 desc">
               <li className={`${styles.sectionText} relative ml-4`}>
                 This internship aims to develop our skills at{' '}
                 <span className="text-white-300">programming foundation </span>{' '}
@@ -45,7 +45,7 @@ const Experience = () => {
                 Through this internship I was able to take courses of over
                 <span className="text-white-300"> 250h </span> of content on
                 these topics:{' '}
-                <div className="sm:ml-16 ml-10 flex flex-col gap-1 mt-2">
+                <div className="flex flex-col gap-1 mt-2 ml-10 sm:ml-16">
                   {experience.topics.map((item) => (
                     <span
                       key={item}
@@ -60,7 +60,7 @@ const Experience = () => {
                 I also had to do 4
                 <span className="text-white-300"> advanced level </span>tasks by
                 myself each focusing on one of these topics:{' '}
-                <div className="sm:ml-16 ml-10 grid grid-cols-2 gap-1 mt-2">
+                <div className="grid grid-cols-2 gap-1 mt-2 ml-10 sm:ml-16">
                   {experience.tasks.map((item) => (
                     <span
                       key={item}
@@ -83,5 +83,5 @@ export default SectionWrapper(
   Experience,
   'experience',
   `min-h-screen w-full ${styles.padding} 
-max-w-7xl mx-auto pb-40`
+max-w-[clamp(350px,100vw,1500px)] mx-auto pb-40`
 );
