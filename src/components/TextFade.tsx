@@ -15,7 +15,7 @@ export function TextFade({
 }) {
   const FADE_DOWN = {
     show: { opacity: 1, y: 0, transition: { type: 'spring' } },
-    hidden: { opacity: 0, y: direction === 'down' ? -18 : 18 },
+    hidden: { opacity: 0, y: direction === 'down' ? -8 : 8 },
   };
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
