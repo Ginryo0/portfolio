@@ -9,10 +9,10 @@
 :root {
   --text-gradient: linear-gradient(
     90deg,
-    rgba(114, 74, 224, 1) 0%,
-    rgba(132, 44, 232, 1) 30%,
-    rgba(156, 102, 255, 1) 60%,
-    rgba(173, 122, 255, 1) 100%
+    #a166ff 0%,
+    #8d66ff 30%,
+    #7b66ff 60%,
+    #9966ff 100%
   );
   --space-gradient: radial-gradient(
     circle at 30% 30%,
@@ -44,7 +44,7 @@
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   background-size: 200% auto;
-  animation: textShine 4s 8s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite alternate;
+  animation: textShine 2s 4s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite alternate;
 }
 
 @keyframes textShine {
@@ -372,10 +372,10 @@ html::-webkit-scrollbar-track {
   position: relative;
   background: #0b0c22;
   background-color: #0b0c22;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   color: #ffffff;
-  border-radius: 4%;
+  border-radius: 5px;
   border: 1px solid transparent;
   transition: color 0.3s ease;
   z-index: 1;
