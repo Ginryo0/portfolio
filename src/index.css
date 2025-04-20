@@ -20,6 +20,9 @@
     rgba(125, 33, 187, 0.3),
     rgba(30, 30, 59, 0.95)
   );
+
+  --cosmic-dark: #100c2a;
+  --purple-main: #a166ff;
 }
 
 * {
@@ -95,7 +98,7 @@
 /* scrollbar firefox */
 html {
   scrollbar-width: 0.3125rem;
-  scrollbar-color: #bccbec9d #0b0c22;
+  scrollbar-color: #bccbec9d var(--cosmic-dark);
 }
 
 /* scrollbar other browsers */
@@ -110,7 +113,7 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: #bccbec9d;
 }
 html::-webkit-scrollbar-track {
-  background-color: #0b0c22;
+  background-color: var(--cosmic-dark);
 }
 
 /* icons */
@@ -351,7 +354,7 @@ html::-webkit-scrollbar-track {
   top: 0;
   right: 0;
   height: 100vh;
-  background-color: #0b0c22;
+  background-color: var(--cosmic-dark);
   width: 70vw;
   transform: translateX(80vw);
   display: flex;
@@ -370,8 +373,7 @@ html::-webkit-scrollbar-track {
 /* cta btn style */
 .cta {
   position: relative;
-  background: #0b0c22;
-  background-color: #0b0c22;
+  background-color: var(--cosmic-dark);
   font-weight: 500;
   cursor: pointer;
   color: #ffffff;
@@ -395,7 +397,7 @@ html::-webkit-scrollbar-track {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: #0b0c22;
+  background: var(--cosmic-dark);
 }
 
 .cta::before {
