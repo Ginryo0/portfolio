@@ -1,32 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text-gradient: linear-gradient(
+    to right,
+    rgb(80, 14, 245) 20%,
+    #7500fa 40%,
+    #9c66ff 60%,
+    #bf98fd 80%
+  );
+
+  --space-gradient: radial-gradient(
+    circle at 30% 30%,
+    rgba(99, 173, 243, 0.746),
+    rgba(125, 33, 187, 0.3),
+    rgba(30, 30, 59, 0.95)
+  );
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Inter', sans-serif;
   /* font-size: 120%; */
   scroll-behavior: smooth;
   color-scheme: dark;
   color: #b4c6d4ab;
 }
 
-.blue-gradient {
-  background: #56ccf2;
-  background: linear-gradient(90deg, #091e47c0 0%, #07132e);
-  background: -webkit-linear-gradient(90deg, #091e47c0 0%, #07132e);
+.radial-gradient {
+  background: var(--space-gradient);
+}
+
+.animated-text {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 4s 8s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes blob1 {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes blob2 {
+  0% {
+    transform: translate(20%, 20%) scale(1);
+  }
+  50% {
+    transform: translate(30%, 30%) scale(1.2);
+  }
+  100% {
+    transform: translate(20%, 20%) scale(1);
+  }
+}
+
+.animate-blob1 {
+  animation: blob1 12s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite;
+  top: 50%;
+  left: 50%;
+}
+
+.animate-blob2 {
+  animation: blob2 8s infinite ease-in-out;
+  bottom: 30%;
+  right: 20%;
 }
 
 /* scrollbar firefox */
 html {
   scrollbar-width: 0.3125rem;
-  scrollbar-color: #bccbec9d #050f24;
+  scrollbar-color: #bccbec9d #0b0c22;
 }
 
 /* scrollbar other browsers */
@@ -41,7 +111,7 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: #bccbec9d;
 }
 html::-webkit-scrollbar-track {
-  background-color: #050f24;
+  background-color: #0b0c22;
 }
 
 /* icons */
@@ -54,7 +124,7 @@ html::-webkit-scrollbar-track {
 }
 
 .icon:hover {
-  stroke: #a06be6;
+  stroke: #a166ff;
 }
 
 .icon_filled path {
@@ -62,12 +132,12 @@ html::-webkit-scrollbar-track {
 }
 
 .icon_filled:hover path {
-  fill: #a06be6;
+  fill: #a166ff;
 }
 .folder {
   width: 40px;
   height: 40px;
-  stroke: #a06be6;
+  stroke: #a166ff;
   stroke-width: 1px;
 }
 
@@ -206,9 +276,9 @@ html::-webkit-scrollbar-track {
 .nav_shown {
   opacity: 1;
   transform: translateY(0);
-  background-color: #050f24c0;
+  background-color: #0b0c22c0;
   backdrop-filter: blur(10px);
-  box-shadow: 0px 2px 4px #a06be685;
+  box-shadow: 0px 2px 4px #a166ff85;
 }
 
 .menu-btn {
@@ -229,7 +299,7 @@ html::-webkit-scrollbar-track {
   width: 35px;
   left: 0;
   height: 2.8px;
-  background-color: #a06be6;
+  background-color: #a166ff;
   border-radius: 4px;
   transition: 0.3s;
 }
@@ -282,7 +352,7 @@ html::-webkit-scrollbar-track {
   top: 0;
   right: 0;
   height: 100vh;
-  background-color: #050f24;
+  background-color: #0b0c22;
   width: 70vw;
   transform: translateX(80vw);
   display: flex;
@@ -300,28 +370,74 @@ html::-webkit-scrollbar-track {
 
 /* cta btn style */
 .cta {
-  background-color: #050f24;
+  position: relative;
+  background: #0b0c22;
+  background-color: #0b0c22;
   font-weight: 600;
   cursor: pointer;
-  color: #a06be6;
-  border-radius: 3px;
-  border: 1px solid #a06be6;
-  transition: 0.3s;
+  color: #ffffff;
+  border-radius: 4%;
+  border: 1px solid transparent;
+  transition: color 0.3s ease;
+  z-index: 1;
+  overflow: visible;
 }
 
-.cta:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 3px 3px 0 0 #a06be6;
+/* Pseudo-element that simulates a gradient shadow */
+.cta::after {
+  content: attr(data-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: -5px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #0b0c22;
 }
 
-.cta-big:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 5px 5px 0 0 #a06be6;
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--text-gradient);
+  z-index: -1;
+  transition: transform 0.3s ease;
+  background-size: 200% auto;
+
+  animation: textShine 2s 4s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite alternate;
+}
+
+.cta-border {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: inherit;
+  background: var(--text-gradient);
+  background-size: 200% auto;
+
+  transition: transform 0.3s ease;
+  animation: textShine 2s 4s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite alternate;
+}
+
+/* On hover: show the gradient shadow underneath the button */
+.cta:hover::before {
+  transform: translate(6%, 12%);
 }
 
 /* tech section sliders */
 .tech-head {
-  border: 2px solid #a06be6;
+  border: 2px solid #a166ff;
   padding: 4px 0;
   width: 160px;
   min-height: 40px;
@@ -406,7 +522,7 @@ html::-webkit-scrollbar-track {
   display: block;
   height: 1px;
   width: 0;
-  background-color: #a06be6;
+  background-color: #a166ff;
   transition: 0.3s ease-in;
 }
 
@@ -420,7 +536,7 @@ html::-webkit-scrollbar-track {
   position: absolute;
   left: -28px;
   top: -4px;
-  color: #a06be6;
+  color: #a166ff;
   font-size: 20px;
 }
 
@@ -429,7 +545,7 @@ html::-webkit-scrollbar-track {
   display: block;
   position: absolute;
   left: -20px;
-  color: #a06be6;
+  color: #a166ff;
   font-size: 18px;
 }
 
@@ -438,7 +554,7 @@ html::-webkit-scrollbar-track {
   display: block;
   position: absolute;
   left: -20px;
-  color: #a06be6;
+  color: #a166ff;
   font-size: 18px;
 }
 
@@ -452,7 +568,7 @@ html::-webkit-scrollbar-track {
   z-index: 4;
   border-radius: 2px;
   padding: 1rem;
-  background-color: #050f2463;
+  background-color: #0b0c2263;
   backdrop-filter: blur(10px);
   opacity: 0;
   animation: alert 2s ease-out 1 forwards;
