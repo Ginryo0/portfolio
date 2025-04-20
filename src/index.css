@@ -8,13 +8,12 @@
 
 :root {
   --text-gradient: linear-gradient(
-    to right,
-    rgb(80, 14, 245) 20%,
-    #7500fa 40%,
-    #9c66ff 60%,
-    #bf98fd 80%
+    90deg,
+    rgba(114, 74, 224, 1) 0%,
+    rgba(132, 44, 232, 1) 30%,
+    rgba(156, 102, 255, 1) 60%,
+    rgba(173, 122, 255, 1) 100%
   );
-
   --space-gradient: radial-gradient(
     circle at 30% 30%,
     rgba(99, 173, 243, 0.746),
