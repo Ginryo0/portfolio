@@ -7,7 +7,7 @@ import Socials from './Socials';
 const Hero = () => {
   return (
     <section
-      className={`relative flex flex-col md:flex-row items-center justify-center min-h-screen overflow-hidden ${styles.paddingX} sm:pr-0 max-w-[clamp(350px,100vw,1500px)] sm:pt-8 pt-20 mx-auto`}
+      className={`relative flex flex-col md:flex-row items-center justify-center min-h-screen overflow-hidden ${styles.paddingX} sm:pr-0 max-w-[clamp(350px,100vw,1500px)] sm:pt-8 pt-28 mx-auto`}
     >
       {/* <div className="absolute w-[clamp(500px,120vw,1200px)] aspect-square bg-gradient-radial-2 opacity-30 rounded-full blur-[5vw] animate-blob1"></div> */}
       {/* <div className="absolute w-[min(80vw,500px)] aspect-square radial-gradient opacity-30 rounded-full blur-3xl animate-blob2"></div> */}
@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="mt-4 xs:text-[16px] flex flex-col items-start sm:gap-8 gap-4 justify-start max-w-fit">
-          <CTABtn className="px-9 py-3 text-[1.5rem]" />
+          <CTABtn className="md:px-9 md:py-3 md:text-[1.5rem]" />
           <Socials className="justify-between w-full sm:max-w-full max-w-[120px] self-center icons_large" />
         </div>
       </div>
