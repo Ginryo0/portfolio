@@ -7,7 +7,7 @@ const CTABtn = ({ className, ...props }) => {
     >
       <a
         className={`inline-block `}
-        href="https://www.linkedin.com/in/ahmed-zeid-106841257/"
+        href="https://www.linkedin.com/in/ahmed-samy-zeid/"
         rel="noreferrer noopener"
         target="_blank"
       >
