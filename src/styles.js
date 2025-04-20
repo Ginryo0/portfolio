@@ -4,11 +4,11 @@ const styles = {
   padding: 'sm:px-16 px-6 sm:pt-24  pt-40',
 
   heroHeadText:
-    'font-bold text-tertiary text-[clamp(2.5rem,1.4rem+5.5vw,8rem)] lg:-mb-4 lg:leading-auto leading-[1.1]',
+    'font-bold text-tertiary text-[clamp(2.5rem,1.8rem+3.5vw,6rem)] lg:-mb-4 lg:leading-auto leading-[1.1]',
   heroSubHead:
-    'font-bold text-white text-[clamp(1.2rem,0.84rem+1.8vw,3rem)] lg:mb-4 mb-2',
+    'font-[400] text-white text-[clamp(1.2rem,1.14rem+0.3vw,1.5rem)] lg:mb-4 mb-2 text-[#F3F3F3]',
   heroSubText:
-    'font-medium text-white lg:text-[20px] sm:text-[18px] font-para text-[14px] lg:leading-[28.25px]',
+    'font-[500] text-white text-[clamp(1.2rem,1.14rem+0.3vw,1.5rem)] ',
   sectionHeadText:
     'text-white font-black md:text-[48.83px] sm:text-[42px] xs:text-[36px] text-[30px] sm:mb-24 mb-8',
   sectionSubText:
