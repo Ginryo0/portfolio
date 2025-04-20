@@ -17,18 +17,17 @@ const Hero = () => {
         <div
           className={` inset-0 md:max-w-1/2 max-w-full flex flex-row items-start justify-center z-5`}
         >
-          {/* Hero Content */}
-
           <div className={``}>
             <TextFade
               direction="up"
               className="flex flex-col justify-center w-full gap-6 pt-0 pb-5"
             >
               <h2 className={`${styles.heroSubText} lg:-mb-4`}>
-                Hi, I'm Ahmed Zeid
+                Hi, I'm{' '}
+                <span className="inline-block animated-text">Ahmed Zeid</span>
               </h2>
-              <h1 className={`${styles.heroHeadText} animate-text`}>
-                Ahmed Zeid
+              <h1 className={`${styles.heroHeadText} text-white`}>
+                Web Developer
               </h1>
               <h2 className={`${styles.heroSubHead}`}>
                 I build fast, beautiful, and user-focused websites that help
