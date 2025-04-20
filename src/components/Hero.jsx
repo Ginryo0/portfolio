@@ -5,8 +5,12 @@ import CTABtn from './mobnav/CTABtn';
 import Socials from './Socials';
 import { GradualSpacing } from './gradual-spacing';
 import { TextFade } from './TextFade';
+import { useState } from 'react';
 
 const Hero = () => {
+  const [onHappy, setOnHappy] = useState(() => {});
+  const [onSad, setOnSad] = useState(() => {});
+
   return (
     <section
       className={`relative flex flex-col md:flex-row items-center justify-start min-h-screen overflow-hidden ${styles.paddingX} sm:pr-0 max-w-[clamp(350px,100vw,1500px)] sm:pt-8 pt-28 mx-auto`}
@@ -21,6 +25,7 @@ const Hero = () => {
             <TextFade
               direction="up"
               className="flex flex-col justify-center w-full gap-6 pt-0 pb-5"
+              staggerChildren={0.3}
             >
               <h2 className={`${styles.heroSubText} lg:-mb-4`}>
                 Hi, I'm{' '}
@@ -35,7 +40,11 @@ const Hero = () => {
                 <br /> Let’s bring your vision to life — one pixel at a time.
               </h2>
               <div className="mt-4 xs:text-[16px] flex flex-col items-start sm:gap-8 gap-4 justify-start max-w-fit">
-                <CTABtn className="md:px-9 md:py-3 md:text-[1.25rem]" />
+                <CTABtn
+                  className="md:px-9 md:py-3 md:text-[1.25rem]"
+                  onMouseEnter={onHappy}
+                  onMouseLeave={onSad}
+                />
                 <Socials className="justify-between w-full sm:max-w-full max-w-[120px] self-center icons_large" />
               </div>
             </TextFade>
@@ -53,11 +62,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <AstroCanvas />
+      <AstroCanvas setOnHappy={setOnHappy} setOnSad={setOnSad} />
 
-      <div className="absolute flex items-center justify-center w-full md:hidden xs:bottom-10 bottom-32 ">
+      <div className="absolute flex items-center justify-center w-full md:hidden xs:bottom-10 bottom-20 ">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white-200 flex justify-center items-start p-2">
+          <div className="flex items-start justify-center w-6 h-12 p-2 border-2 rounded-2xl border-white-200">
             <motion.div
               animate={{
                 y: [0, 24, 0],

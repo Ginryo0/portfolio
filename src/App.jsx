@@ -33,7 +33,7 @@ const App = () => {
             <StarsCanvas />
             <Hero />
             <div
-              className={`flex sm:flex-row flex-col min-h-screen w-full ${styles.paddingX} pt-40 sm:pt-0 justify-between items-center sm:gap-5 gap-40 max-w-[clamp(350px,100vw,1500px)] mx-auto`}
+              className={`flex sm:flex-row flex-col min-h-screen w-full ${styles.paddingX} pt-4 sm:pt-0 justify-between items-center sm:gap-5 gap-40 max-w-[clamp(350px,100vw,1500px)] mx-auto`}
             >
               <About />
 

@@ -6,35 +6,45 @@ import useWindowDimensions from '../../hooks/useMobileMedia';
 import CanvasLoader from '../CanvasLoader';
 import { useSpring, a } from '@react-spring/three';
 
-const Astro = ({ setOnClickFn }) => {
+const Astro = ({ setOnSad, setOnHappy }) => {
   const astro = useGLTF('./astro/scene.gltf');
   const normalFace = useTexture('./astro/textures/face.png');
   const happyFace = useTexture('./astro/textures/face-happy.png');
   const sadFace = useTexture('./astro/textures/face-sad.png');
-  const logoFace = useTexture('./astro/textures/face-logo.png');
-  const textures = [normalFace, happyFace, sadFace, logoFace];
   const { isMobile, windowDimensions } = useWindowDimensions();
+  const [isSadFace, setIsSadFace] = useState(false);
   const faceRef = useRef();
 
   const xPos = (windowDimensions.width / 1920) * 0.3;
+
+  const changeFace = (face) => {
+    setTimeout(() => {
+      faceRef.current.material.map = face;
+    }, 500);
+    if (face == sadFace) {
+      setIsSadFace(true);
+    }
+  };
 
   useEffect(() => {
     astro.scene.traverse((child) => {
       if (child.name === 'Object_9') {
         faceRef.current = child;
 
-        setOnClickFn(() => {
-          let currentFace = 0;
-          const fn = () => {
-            currentFace += 1;
-            const newFace = (currentFace + 1) % textures.length;
-            faceRef.current.material.map = textures[newFace];
-          };
-          return fn;
-        });
+        setOnHappy(() => changeFace.bind(null, happyFace));
+        setOnSad(() => changeFace.bind(null, sadFace));
       }
     });
   }, [astro]);
+
+  useEffect(() => {
+    if (isSadFace) {
+      setTimeout(() => {
+        changeFace(normalFace);
+        setIsSadFace(false);
+      }, 1500);
+    }
+  }, [isSadFace]);
 
   // Floating animation
   // Spring animation for floating effect
@@ -61,12 +71,6 @@ const Astro = ({ setOnClickFn }) => {
     },
   });
 
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     fn();
-  //   }, 2000);
-  // }, [faceRef.current]);
-
   return (
     <mesh>
       <hemisphereLight intensity={0.2} groundColor="black" />
@@ -91,19 +95,23 @@ const Astro = ({ setOnClickFn }) => {
   );
 };
 
-const AstroCanvas = () => {
+const AstroCanvas = ({ setOnHappy, setOnSad }) => {
   const { windowDimensions } = useWindowDimensions();
-  const [onClickFn, setOnClickFn] = useState(() => {});
 
   const { width } = windowDimensions;
   const fovScaler =
-    width > 1500 ? 24 : width > 1200 ? 18 : width > 800 ? 12 : 3;
+    width > 1500
+      ? 24
+      : width > 1200
+      ? 18
+      : width > 800
+      ? 12
+      : width > 500
+      ? 2
+      : 1.8;
 
   return (
-    <div
-      className="md:w-[25vw] w-full md:h-screen h-[50vh] cursor-pointer"
-      onClick={onClickFn}
-    >
+    <div className="md:w-[25vw] w-full md:h-screen  h-52 cursor-pointer">
       <Canvas
         frameloop="demand"
         shadows
@@ -125,7 +133,7 @@ const AstroCanvas = () => {
             // autoRotateSpeed={-3}
           />
 
-          <Astro setOnClickFn={setOnClickFn} />
+          <Astro setOnHappy={setOnHappy} setOnSad={setOnSad} />
         </Suspense>
       </Canvas>
     </div>
