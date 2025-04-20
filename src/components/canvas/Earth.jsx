@@ -6,7 +6,7 @@ import CanvasLoader from '../CanvasLoader';
 
 const Earth = () => {
   const earth = useGLTF('./planet/scene.gltf');
-  const isMobile = useMobileMedia();
+  const { isMobile } = useMobileMedia();
 
   return (
     <primitive
