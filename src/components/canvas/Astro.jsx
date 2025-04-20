@@ -97,7 +97,7 @@ const AstroCanvas = () => {
 
   const { width } = windowDimensions;
   const fovScaler =
-    width > 1500 ? 18 : width > 1200 ? 15.5 : width > 800 ? 12 : 5;
+    width > 1500 ? 24 : width > 1200 ? 18 : width > 800 ? 12 : 3;
 
   return (
     <div
@@ -105,7 +105,7 @@ const AstroCanvas = () => {
       onClick={onClickFn}
     >
       <Canvas
-        frameloop="always"
+        frameloop="demand"
         shadows
         gl={{ antialias: false }}
         dpr={[1, 1.5]}
