@@ -6,33 +6,29 @@ import Socials from './Socials';
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
-      <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start lg:mt-20 mt-10 justify-start z-5`}
-      >
-        <div className="mt-10 ml-10 lg:text-[31.25px]  sm:text-[25px] xs:text-[16px] min-[900px]:top-[14rem] min-[724px]:top-[16rem] sm:top-[18rem] sm:left-[2rem] xs:top-[12rem] top-[12.4rem] left-[0rem] z-20 absolute flex items-center sm:gap-12 gap-20">
-          <CTABtn className="px-8 py-2 cta-big " />
-          <Socials className="icons_large" />
-        </div>
-        <div className="w-1 mt-2 mr-5 sm:h-40 h-28 blue-gradient"></div>
-        <div className={`w-50`}>
-          <h5 className={`${styles.heroSubText} -mb-[4px]`}>Hi, I'm</h5>
-          <h1 className={`${styles.heroHeadText}`}>Ahmed Zeid</h1>
-          <h2 className={`${styles.heroSubHead} `}>
-            I Launch Your <span className="text-tertiary">Web </span>Dreams to
-            the <span className="text-tertiary">Stars</span>.
-          </h2>
+    <section
+      className={`relative flex flex-col md:flex-row items-center justify-center min-h-screen overflow-hidden ${styles.paddingX} sm:pr-0 max-w-[clamp(350px,100vw,1500px)] sm:pt-8 pt-20 mx-auto`}
+    >
+      {/* <div className="absolute w-[clamp(500px,120vw,1200px)] aspect-square bg-gradient-radial-2 opacity-30 rounded-full blur-[5vw] animate-blob1"></div> */}
+      {/* <div className="absolute w-[min(80vw,500px)] aspect-square radial-gradient opacity-30 rounded-full blur-3xl animate-blob2"></div> */}
+      <div className="flex flex-col">
+        <div
+          className={` inset-0 md:max-w-1/2 max-w-full flex flex-row items-start justify-center z-5`}
+        >
+          {/* Hero Content */}
 
-          <ul className={`${styles.heroSubText} pr-62 hero-list`}>
-            <li className="relative text-white-200 font-para">
-              I am an enthusiastic web developer with a passion for creating
-              engaging websites.
-            </li>
-            <li className="relative text-white-200 font-para">
-              My goal is to bring the optimal solutions to users and enhance
-              their overall browsing experience.
-            </li>
-          </ul>
+          <div className={`w-50 flex flex-col gap-2`}>
+            <h5 className={`${styles.heroSubText} lg:-mb-4`}>Hi, I'm</h5>
+            <h1 className={`${styles.heroHeadText} text-white`}>Ahmed Zeid</h1>
+            <h2 className={`${styles.heroSubHead}`}>
+              A <span className="animated-text"> Web Developer</span> Crafting
+              Seamless Digital Experiences.
+            </h2>
+          </div>
+        </div>
+        <div className="mt-4 xs:text-[16px] flex flex-col items-start sm:gap-8 gap-4 justify-start max-w-fit">
+          <CTABtn className="px-9 py-3 text-[1.5rem]" />
+          <Socials className="justify-between w-full sm:max-w-full max-w-[120px] self-center icons_large" />
         </div>
       </div>
 
