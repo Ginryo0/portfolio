@@ -1,4 +1,4 @@
-import logo from './logo-v2.png';
+import logo from './logo.svg';
 import astro from './astro.png';
 import albonyan from './company/albonyan.png';
 
