@@ -3,11 +3,13 @@ import { styles } from '../styles';
 import { AstroCanvas } from './canvas';
 import CTABtn from './mobnav/CTABtn';
 import Socials from './Socials';
+import { GradualSpacing } from './gradual-spacing';
+import { TextFade } from './TextFade';
 
 const Hero = () => {
   return (
     <section
-      className={`relative flex flex-col md:flex-row items-center justify-center min-h-screen overflow-hidden ${styles.paddingX} sm:pr-0 max-w-[clamp(350px,100vw,1500px)] sm:pt-8 pt-28 mx-auto`}
+      className={`relative flex flex-col md:flex-row items-center justify-start min-h-screen overflow-hidden ${styles.paddingX} sm:pr-0 max-w-[clamp(350px,100vw,1500px)] sm:pt-8 pt-28 mx-auto`}
     >
       {/* <div className="absolute w-[clamp(500px,120vw,1200px)] aspect-square bg-gradient-radial-2 opacity-30 rounded-full blur-[5vw] animate-blob1"></div> */}
       {/* <div className="absolute w-[min(80vw,500px)] aspect-square radial-gradient opacity-30 rounded-full blur-3xl animate-blob2"></div> */}
@@ -17,24 +19,44 @@ const Hero = () => {
         >
           {/* Hero Content */}
 
-          <div className={`w-50 flex flex-col gap-2`}>
-            <h5 className={`${styles.heroSubText} lg:-mb-4`}>Hi, I'm</h5>
-            <h1 className={`${styles.heroHeadText} text-white`}>Ahmed Zeid</h1>
-            <h2 className={`${styles.heroSubHead}`}>
-              A <span className="animated-text"> Web Developer</span> Crafting
-              Seamless Digital Experiences.
-            </h2>
+          <div className={``}>
+            <TextFade
+              direction="up"
+              className="flex flex-col justify-center w-full gap-6 pt-0 pb-5"
+            >
+              <h2 className={`${styles.heroSubText} lg:-mb-4`}>
+                Hi, I'm Ahmed Zeid
+              </h2>
+              <h1 className={`${styles.heroHeadText} animate-text`}>
+                Ahmed Zeid
+              </h1>
+              <h2 className={`${styles.heroSubHead}`}>
+                I build fast, beautiful, and user-focused websites that help
+                brands shine online.
+                <br /> Let’s bring your vision to life — one pixel at a time.
+              </h2>
+              <div className="mt-4 xs:text-[16px] flex flex-col items-start sm:gap-8 gap-4 justify-start max-w-fit">
+                <CTABtn className="md:px-9 md:py-3 md:text-[1.25rem]" />
+                <Socials className="justify-between w-full sm:max-w-full max-w-[120px] self-center icons_large" />
+              </div>
+            </TextFade>
+            {/* <GradualSpacing
+              text="Hi, I'm Ahmed Zeid"
+              className={`${styles.heroSubText} lg:-mb-4`}
+            /> */}
+            {/* <h5 className={`${styles.heroSubText} lg:-mb-4`}></h5> */}
+            {/* <GradualSpacing
+              text="Web Developer"
+              className={`${styles.heroHeadText} animated-text justify-start`}
+            /> */}
+            {/* <h1 className={`${styles.heroHeadText} text-white`}>Ahmed Zeid</h1> */}
           </div>
-        </div>
-        <div className="mt-4 xs:text-[16px] flex flex-col items-start sm:gap-8 gap-4 justify-start max-w-fit">
-          <CTABtn className="md:px-9 md:py-3 md:text-[1.5rem]" />
-          <Socials className="justify-between w-full sm:max-w-full max-w-[120px] self-center icons_large" />
         </div>
       </div>
 
       <AstroCanvas />
 
-      <div className="absolute flex items-center justify-center w-full xs:bottom-10 bottom-32">
+      <div className="absolute flex items-center justify-center w-full md:hidden xs:bottom-10 bottom-32 ">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white-200 flex justify-center items-start p-2">
             <motion.div
