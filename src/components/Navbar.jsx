@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 nav ${navClass}`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center max-w-[clamp(350px,100vw,1500px)] mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -48,7 +48,7 @@ const Navbar = () => {
             src={logo}
             ref={logoIcon}
             alt="logo"
-            className="logo w-9 h-9 object-contain"
+            className="object-contain logo w-9 h-9"
             onMouseEnter={() => {
               if (!logoIcon.current.className.includes('animate')) {
                 logoIcon.current.classList.add('animate');
@@ -59,24 +59,24 @@ const Navbar = () => {
             }}
           />
         </Link>
-        <div className="hidden sm:flex flex-row items-center justify-center gap-10">
-          <ul className="list-none hidden sm:flex flex-row gap-10">
+        <div className="flex-row items-center justify-center hidden gap-10 sm:flex">
+          <ul className="flex-row hidden gap-10 list-none sm:flex">
             {navLinks.map((link) => (
               <li
                 key={link.id}
                 className={`${
                   active === link.title ? 'text-tertiary' : 'text-secondary'
-                } hover:text-tertiary text-[18px] font-medium cursor-pointer`}
+                } hover:text-tertiary text-[18px] font-medium cursor-pointer link`}
                 onClick={() => setActive(link.title)}
               >
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
           </ul>
-          <CTABtn className="py-1 px-2" />
+          <CTABtn className="px-2 py-1" />
         </div>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="flex items-center justify-end flex-1 sm:hidden">
           <MobNav toggle={toggle} onClick={toggleNav}>
             {navLinks.map((link) => (
               <li

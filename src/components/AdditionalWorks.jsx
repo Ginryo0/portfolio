@@ -9,7 +9,7 @@ const AdditionalWorks = () => {
     <>
       <motion.div
         variants={textVariant()}
-        className="w-full text-center mx-auto"
+        className="w-full mx-auto text-center"
       >
         <p className={`${styles.sectionSubText} `}>Other noteworthy projects</p>
         <h2 className={styles.sectionHeadText}>Additional Projects</h2>
@@ -22,6 +22,6 @@ const AdditionalWorksComponent = SectionWrapper(
   AdditionalWorks,
   'more_works',
   `min-h-screen w-full ${styles.padding} 
-max-w-7xl mx-auto`
+max-w-[clamp(350px,100vw,1500px)] mx-auto`
 );
 export default AdditionalWorksComponent;
