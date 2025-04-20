@@ -14,7 +14,7 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: 'Portfolio Mail',
     message: '',
   });
   const [loading, setLoading] = useState(false);
@@ -32,7 +32,6 @@ const Contact = () => {
     setTimeout(() => {
       setAlert('');
     }, 4000);
-    return;
     if (
       !form.name ||
       !form.email ||
@@ -84,71 +83,62 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`flex xl:items-start xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] relative bg-transparent border-tertiary border-2 p-8 rounded"
+        className="flex-[0.75] relative bg-transparent border-tertiary border-2 p-8 rounded-lg"
       >
         {alert && <Alert state={alert} error={error}></Alert>}
 
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact</h3>
+        <h3 className={`${styles.sectionHeadText} sm:mb-12`}>Contact</h3>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8 relative"
+          className="relative flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-tertiary font-medium mb-4">Name</span>
+            <span className="mb-4 font-medium text-tertiary">Name</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="Gin Ryo"
-              className="bg-lighter font-para bg-opacity-50 py-4 px-6 placeholder:text-white-200 text-white rounded-lg outline-none border-none font-medium"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-lighter font-para placeholder:text-white-200"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-tertiary font-medium mb-4">Email</span>
+            <span className="mb-4 font-medium text-tertiary">Email</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="ahmed@gryo.com"
-              className="bg-lighter bg-opacity-50 font-para py-4 px-6 placeholder:text-white-200 text-white rounded-lg outline-none border-none font-medium"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-lighter font-para placeholder:text-white-200"
             />
           </label>
+
           <label className="flex flex-col">
-            <span className="text-tertiary font-medium mb-4">Subject</span>
-            <input
-              type="text"
-              name="subject"
-              value={form.subject}
-              onChange={handleChange}
-              placeholder="Type subject..."
-              className="bg-lighter bg-opacity-50 font-para py-4 px-6 placeholder:text-white-200 text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-tertiary font-medium mb-4">Message</span>
+            <span className="mb-4 font-medium text-tertiary">Message</span>
             <textarea
               rows={7}
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="Type message"
-              className="bg-lighter bg-opacity-50 font-para py-4 px-6 placeholder:text-white-200 text-white rounded-lg outline-none border-none font-medium"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-lighter font-para placeholder:text-white-200"
             />
           </label>
 
-          <div className="flex sm:flex-row sm:justify-between sm:align-center sm:gap-0 flex-col gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:align-center sm:gap-0">
             <button
               type="submit"
-              className="cta py-3 px-8 w-fit"
+              className="px-8 py-3 cta w-fit"
               disabled={loading}
+              data-text={loading ? 'Sending...' : 'Say Hello'}
             >
               {loading ? 'Sending...' : 'Say Hello'}
             </button>
@@ -170,7 +160,7 @@ const contactComponent = SectionWrapper(
   Contact,
   'contact',
   `min-h-screen w-full ${styles.padding} 
-max-w-7xl mx-auto sm:pb-24  pb-40`
+max-w-[clamp(350px,100vw,1500px)] mx-auto sm:pb-24  pb-40`
 );
 
 export default contactComponent;
