@@ -44,6 +44,8 @@ const Hero = () => {
                   className="md:px-9 md:py-3 md:text-[1.25rem]"
                   onMouseEnter={onHappy}
                   onMouseLeave={onSad}
+                  onTouchStart={onHappy}
+                  onTouchEnd={onSad}
                 />
                 <Socials className="justify-between w-full sm:max-w-full max-w-[120px] self-center icons_large" />
               </div>
