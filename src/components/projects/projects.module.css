@@ -82,6 +82,7 @@
     text-align: left;
     padding: 80px 40px;
     background-color: #050f24b9;
+    border-radius: inherit;
   }
   .project_content .project_text {
     background: transparent;
@@ -93,5 +94,12 @@
 
   .project_item:nth-of-type(2n) .project_content .flexed {
     justify-content: flex-end;
+  }
+}
+
+@media (max-width: 400px) {
+  .project_content,
+  .project_item:nth-of-type(2n) .project_content {
+    padding: 40px 20px;
   }
 }

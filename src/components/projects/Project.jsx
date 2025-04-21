@@ -17,14 +17,14 @@ const Project = ({
   return (
     <motion.li
       variants={fadeIn('up', 'spring', 0.5 * idx, 1.5)}
-      className={`${classes.project_item} w-full mb-16`}
+      className={`${classes.project_item}  rounded w-full mb-16`}
     >
       <div
         className={`${classes.project_img} relative rounded overflow-hidden`}
       >
         <a
           href={live}
-          className="w-full h-full absolute block"
+          className="absolute block w-full h-full"
           rel="noreferrer noopener"
           target="_blank"
         >

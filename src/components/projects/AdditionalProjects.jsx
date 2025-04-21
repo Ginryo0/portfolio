@@ -2,11 +2,11 @@ import { additionalProjects } from '../../constants';
 import AdditionalProject from './AdditionalProject';
 const AdditionalProjects = () => {
   return (
-    <div className="w-full grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-8">
+    <ul className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
       {additionalProjects.map((proj, idx) => (
         <AdditionalProject {...proj} idx={idx} key={idx} />
       ))}
-    </div>
+    </ul>
   );
 };
 export default AdditionalProjects;
