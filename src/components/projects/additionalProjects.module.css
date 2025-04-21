@@ -1,12 +1,12 @@
 .project_card {
-  /* border: 2px solid #a06be6; */
+  /* border: 2px solid var(--purple-main); */
   background-color: #0b1937;
   transition: 0.4s ease;
 }
 
 .project_card:hover {
   transform: translate(-4px, -8px) !important;
-  box-shadow: 6px 6px 0px #a06be6;
+  box-shadow: 6px 6px 0px var(--purple-main);
 }
 
 .project_card h3 a {
@@ -24,5 +24,5 @@
   z-index: 0;
 }
 .project_card:hover a {
-  color: #a06be6;
+  color: var(--purple-main);
 }

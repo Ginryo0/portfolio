@@ -17,7 +17,7 @@ const AdditionalProject = ({
   return (
     <motion.li
       variants={fadeIn('up', 'spring', 0.05 * idx, 0.5)}
-      className={`${classes.project_card} w-full p-8 rounded flex flex-col relative`}
+      className={`${classes.project_card} relative w-full p-8 rounded flex flex-col relative`}
     >
       <div className={`flex w-full justify-between items-center mb-8`}>
         <div className="folder">
@@ -82,6 +82,7 @@ const AdditionalProject = ({
           </li>
         ))}
       </ul>
+      {/* <div className="cta-border"></div> */}
     </motion.li>
   );
 };

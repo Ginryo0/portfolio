@@ -4,7 +4,7 @@ import {
   Hero,
   Navbar,
   About,
-  Tech,
+  Achievements,
   Experience,
   Works,
   Contact,
@@ -34,13 +34,13 @@ const App = () => {
             <StarsCanvas />
             <Hero />
 
+            {/* gap-40 */}
             <div
-              className={`flex sm:flex-row flex-col md:min-h-screen w-full ${styles.paddingX} pt-4 sm:pt-0 justify-between items-center sm:gap-5 gap-12 max-w-[clamp(350px,100vw,1500px)] mx-auto`}
+              className={`grid grid-cols-1 md:grid-cols-3 items-start md:mb-16 w-full ${styles.paddingX} pt-4 sm:pt-0 justify-between items-center lg:gap-8 md:gap-1 gap-4 max-w-[clamp(350px,100vw,1500px)] mx-auto`}
             >
-              {/* gap-40 */}
               <About />
 
-              <Tech />
+              <Achievements />
             </div>
             <TechSlider />
 
