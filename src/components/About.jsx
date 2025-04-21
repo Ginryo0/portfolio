@@ -6,42 +6,33 @@ import SectionWrapper from './hoc/SectionWrapper';
 
 const About = () => {
   return (
-    <>
+    <d>
       <motion.div variants={textVariant()}>
         {/* <img src={astro} style={{ opacity: '0.5', width: '20%' }} /> */}
         <p className={`${styles.sectionSubText} `}>Overview</p>
         <h2 className={styles.sectionHeadText}>About</h2>
       </motion.div>
-      <motion.div variants={slideIn('left', 'spring', 0.2, 2)}>
+      <motion.div
+        variants={slideIn('left', 'spring', 0.2, 2)}
+        className="flex flex-col gap-8"
+      >
         <p className={styles.sectionText}>
-          Hello! My name is <span className="text-tertiary">Ahmed</span> and I
-          am a <span className="text-tertiary">web developer</span>.
+          I’m a <span className="animated-text"> Full-Stack Developer</span>,
+          with a couple of years of hands-on experience building{' '}
+          <span className="animated-text"></span>AI-powered tools, SaaS
+          platforms, and Chrome extensions. I’m all about blending creativity
+          with functionality to deliver intuitive, polished digital products.
         </p>
         <p className={styles.sectionText}>
-          I have a true passion for creating digital experiences that come to
-          life on the internet.
-        </p>
-        <p className={styles.sectionText}>
-          My technical skills include proficiency in
-          <span className="text-tertiary">
-            {' '}
-            HTML, CSS, JavaScript, React, Node,{' '}
-          </span>
-          and a variety of other modern web development frameworks and tools.
-        </p>
-        <p className={styles.sectionText}>
-          I am constantly seeking to improve my skills and knowledge. I am
-          currently interested in 3D Websites.
-        </p>
-        <p className={styles.sectionText}>
-          With a keen eye for detail and a deep understanding of web development
-          technologies, I am confident in my ability to create
-          <span className="text-tertiary"> innovative </span>and
-          <span className="text-tertiary"> effective </span> solutions that meet
-          the needs of both clients and users.
+          Driven by curiosity and a love for emerging tech, I build{' '}
+          <span className="animated-text">interactive tools</span> and platforms
+          that spark engagement and streamline user experience. From chatbot
+          generators to dashboards, my focus is on creating polished,{' '}
+          <span className="animated-text">forward-thinking</span> web apps that
+          feel as good as they function.
         </p>
       </motion.div>
-    </>
+    </d>
   );
 };
 
