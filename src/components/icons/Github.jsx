@@ -1,4 +1,4 @@
-const github = () => {
+const Github = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,4 +16,4 @@ const github = () => {
     </svg>
   );
 };
-export default github;
+export default Github;

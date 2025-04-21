@@ -1,16 +1,16 @@
 const Mail = () => {
   return (
     <svg
-      fill="#000000"
+      fill="currentColor"
       height="800px"
       width="800px"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 64 64"
-      enable-background="new 0 0 64 64"
-      xml:space="preserve"
+      enableBackground="new 0 0 64 64"
+      xmlSpace="preserve"
       className="icon icon_filled"
     >
       <path
