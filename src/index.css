@@ -9,7 +9,7 @@
 :root {
   --text-gradient: linear-gradient(
     90deg,
-    #a166ff 0%,
+    var(--purple-main) 0%,
     #8d66ff 30%,
     #7b66ff 60%,
     #9966ff 100%
@@ -126,7 +126,7 @@ html::-webkit-scrollbar-track {
 }
 
 .icon:hover {
-  stroke: #a166ff;
+  stroke: var(--purple-main);
 }
 
 .icon_filled path {
@@ -134,12 +134,12 @@ html::-webkit-scrollbar-track {
 }
 
 .icon_filled:hover path {
-  fill: #a166ff;
+  fill: var(--purple-main);
 }
 .folder {
   width: 40px;
   height: 40px;
-  stroke: #a166ff;
+  stroke: var(--purple-main);
   stroke-width: 1px;
 }
 
@@ -301,7 +301,7 @@ html::-webkit-scrollbar-track {
   width: 35px;
   left: 0;
   height: 2.8px;
-  background-color: #a166ff;
+  background-color: var(--purple-main);
   border-radius: 4px;
   transition: 0.3s;
 }
@@ -438,7 +438,7 @@ html::-webkit-scrollbar-track {
 
 /* tech section sliders */
 .tech-head {
-  border: 2px solid #a166ff;
+  border: 2px solid var(--purple-main);
   padding: 4px 0;
   width: 160px;
   min-height: 40px;
@@ -452,15 +452,17 @@ html::-webkit-scrollbar-track {
 .roll-bar {
   display: block;
   display: flex;
-  width: 700px;
+  width: 100vw;
+  max-width: fit-content;
   justify-content: center;
-  transform: translateX(20%);
-  gap: 20px;
+  /* transform: translateX(20%); */
+  gap: 10%;
   animation: slide 10.5s linear infinite;
 }
 
 .roll-bar p {
-  min-width: 80px;
+  min-width: max-content;
+  flex: 1;
 }
 
 .tech-logo {
@@ -523,7 +525,7 @@ html::-webkit-scrollbar-track {
   display: block;
   height: 1px;
   width: 0;
-  background-color: #a166ff;
+  background-color: var(--purple-main);
   transition: 0.3s ease-in;
 }
 
@@ -537,7 +539,7 @@ html::-webkit-scrollbar-track {
   position: absolute;
   left: -28px;
   top: -4px;
-  color: #a166ff;
+  color: var(--purple-main);
   font-size: 20px;
 }
 
@@ -546,7 +548,7 @@ html::-webkit-scrollbar-track {
   display: block;
   position: absolute;
   left: -20px;
-  color: #a166ff;
+  color: var(--purple-main);
   font-size: 18px;
 }
 
@@ -555,7 +557,7 @@ html::-webkit-scrollbar-track {
   display: block;
   position: absolute;
   left: -20px;
-  color: #a166ff;
+  color: var(--purple-main);
   font-size: 18px;
 }
 

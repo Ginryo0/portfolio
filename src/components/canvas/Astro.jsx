@@ -20,7 +20,7 @@ const Astro = ({ setOnSad, setOnHappy }) => {
   const changeFace = (face) => {
     setTimeout(() => {
       faceRef.current.material.map = face;
-    }, 500);
+    }, 200);
     if (face == sadFace) {
       setIsSadFace(true);
     }
@@ -111,7 +111,7 @@ const AstroCanvas = ({ setOnHappy, setOnSad }) => {
       : 1.8;
 
   return (
-    <div className="md:w-[25vw] w-full md:h-screen  h-52 cursor-pointer">
+    <div className="md:w-[25vw] w-full md:h-screen h-52">
       <Canvas
         frameloop="demand"
         shadows
