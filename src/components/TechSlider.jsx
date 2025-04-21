@@ -18,7 +18,7 @@ const TechSlider = () => {
 
   useAnimationFrame((_, delta) => {
     if (containerRef.current) {
-      x.current -= delta * 0.15; // adjust speed here
+      x.current -= delta * containerRef.current.scrollWidth * 0.00002; // adjust speed here
       if (Math.abs(x.current) >= width) {
         x.current = 0;
       }
@@ -27,7 +27,7 @@ const TechSlider = () => {
   });
 
   return (
-    <div className="relative w-screen py-6 overflow-hidden bg-[#120d2656]">
+    <div className="relative w-screen md:py-6 py-3 overflow-hidden bg-[#120d2656]">
       {/* Fading edges */}
       <div className="absolute top-0 left-0 z-10 w-16 h-full bg-gradient-to-r from-primary to-transparent" />
       <div className="absolute top-0 right-0 z-10 w-16 h-full bg-gradient-to-l from-primary to-transparent" />
@@ -35,7 +35,7 @@ const TechSlider = () => {
       {/* Seamless duplicated slider */}
       <div
         ref={containerRef}
-        className="flex gap-12 leading-[130%] text-[clamp(1.5rem,1rem+2.5vw,4rem)] font-[600] tracking-wide text-white whitespace-nowrap"
+        className="flex md:gap-12 gap-6 leading-[1.3] text-[clamp(1.5rem,1rem+2.5vw,4rem)] font-[600] tracking-wide text-white whitespace-nowrap"
       >
         {[...tech, ...tech].map((tech, i) => (
           <>

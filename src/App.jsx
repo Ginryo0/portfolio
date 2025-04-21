@@ -33,9 +33,11 @@ const App = () => {
             <div className="fixed top-0 z w-[clamp(500px,120vw,1200px)] aspect-square bg-gradient-radial-2 opacity-30 rounded-full blur-[5vw] animate-blob1"></div>
             <StarsCanvas />
             <Hero />
+
             <div
-              className={`flex sm:flex-row flex-col min-h-screen w-full ${styles.paddingX} pt-4 sm:pt-0 justify-between items-center sm:gap-5 gap-40 max-w-[clamp(350px,100vw,1500px)] mx-auto`}
+              className={`flex sm:flex-row flex-col md:min-h-screen w-full ${styles.paddingX} pt-4 sm:pt-0 justify-between items-center sm:gap-5 gap-12 max-w-[clamp(350px,100vw,1500px)] mx-auto`}
             >
+              {/* gap-40 */}
               <About />
 
               <Tech />

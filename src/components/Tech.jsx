@@ -14,7 +14,10 @@ const Tech = () => {
         <p className={`${styles.sectionSubText} `}>Tools</p>
         <h2 className={styles.sectionHeadText}>Tech</h2>
       </motion.div> */}
-      <motion.div variants={slideIn('right', 'spring', 0.2, 2)}>
+      <motion.div
+        variants={slideIn('right', 'spring', 0.2, 2)}
+        className="hidden md:block"
+      >
         {/* <div className="mb-5 tech-head">
           <div className="roll-bar">
             {tech.map((item) => {

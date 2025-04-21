@@ -83,5 +83,5 @@ export default SectionWrapper(
   Experience,
   'experience',
   `min-h-screen w-full ${styles.padding} 
-max-w-[clamp(350px,100vw,1500px)] mx-auto pb-40`
+max-w-[clamp(350px,100vw,1500px)] mx-auto`
 );
