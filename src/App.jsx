@@ -14,6 +14,7 @@ import {
 } from './components';
 
 import { styles } from './styles';
+import TechSlider from './components/TechSlider';
 const App = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -39,6 +40,8 @@ const App = () => {
 
               <Tech />
             </div>
+            <TechSlider />
+
             <Experience />
 
             <Works />
