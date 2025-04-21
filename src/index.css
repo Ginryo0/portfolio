@@ -33,7 +33,7 @@
   /* font-size: 120%; */
   scroll-behavior: smooth;
   color-scheme: dark;
-  color: #b4c6d4ab;
+  /* color: #b4c6d4ab; */
 }
 
 .radial-gradient {
@@ -421,6 +421,7 @@ html::-webkit-scrollbar-track {
   position: absolute;
   top: -1px;
   left: -1px;
+  z-index: -1;
   width: calc(100% + 2px);
   height: calc(100% + 2px);
   border-radius: inherit;
