@@ -278,7 +278,7 @@ html::-webkit-scrollbar-track {
 .nav_shown {
   opacity: 1;
   transform: translateY(0);
-  background-color: #0b0c22c0;
+  background-color: #120d2691;
   backdrop-filter: blur(10px);
   box-shadow: 0px 2px 4px #a166ff85;
 }
