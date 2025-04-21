@@ -27,42 +27,58 @@ export const navLinks = [
 ];
 
 const tech = [
+  // {
+  //   name: 'HTML 5',
+  //   icon: html,
+  //   color: '#ff6d00',
+  // },
+  // {
+  //   name: 'CSS 3',
+  //   icon: css,
+  //   color: '#039be5',
+  // },
+  // {
+  //   name: 'JavaScript',
+  //   icon: javascript,
+  //   color: '#ffd600',
+  // },
   {
-    name: 'HTML 5',
-    icon: html,
-    color: '#ff6d00',
+    name: 'Next.JS',
+    icon: nodejs,
+    color: '#21a366',
   },
   {
-    name: 'CSS 3',
-    icon: css,
-    color: '#039be5',
-  },
-  {
-    name: 'JavaScript',
-    icon: javascript,
-    color: '#ffd600',
-  },
-  {
-    name: 'React JS',
+    name: 'React',
     icon: reactjs,
     color: '#53c1de',
   },
 
   {
-    name: 'Node JS',
+    name: 'Node.JS',
+    icon: nodejs,
+    color: '#21a366',
+  },
+
+  {
+    name: 'Tailwind',
     icon: nodejs,
     color: '#21a366',
   },
   {
-    name: 'MongoDB',
-    icon: mongodb,
-    color: '#4caf50',
+    name: 'Redux',
+    icon: nodejs,
+    color: '#21a366',
   },
-  {
-    name: 'git',
-    icon: git,
-    color: '#f4511e',
-  },
+  // {
+  //   name: 'MongoDB',
+  //   icon: mongodb,
+  //   color: '#4caf50',
+  // },
+  // {
+  //   name: 'git',
+  //   icon: git,
+  //   color: '#f4511e',
+  // },
 ];
 
 const experience = {
