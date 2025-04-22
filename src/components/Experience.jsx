@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { albonyan } from '../assets';
 import { slideIn, textVariant } from '../utils/motion';
 import { styles } from '../styles';
-import { experience } from '../constants';
+import { EXPERIENCES } from '../constants';
 import SectionWrapper from './hoc/SectionWrapper';
 
 const Experience = () => {
@@ -12,69 +12,45 @@ const Experience = () => {
         <p className={`${styles.sectionSubText} `}>Where I've worked</p>
         <h2 className={styles.sectionHeadText}>Experience</h2>
       </motion.div>
-      <motion.div variants={slideIn('down', 'tween', 0, 1.5)}>
-        <div className="mx-auto">
-          <div>
-            <img src={albonyan} alt="kalbonyan almarsos" className="w-[80px]" />
-          </div>
-          <div className="exp">
-            <div className="flex flex-col mt-4 mb-2 sm:gap-1 sm:flex-row sm:items-center sm:mb-2">
-              <h3 className={`${styles.sectionH3} mb-0`}>
-                Software Engineering Intern
-              </h3>
-              <div className="flex gap-1">
-                <p className={`${styles.sectionLink}`}> @ </p>
-                <a
-                  className={`${styles.sectionLink} link`}
-                  href="https://www.albonyanalmarsos.org/"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  Kalbonyan Almarsos
-                </a>
+      <div className="grid items-center grid-cols-1 gap-4 mx-auto lg:gap-8 lg:grid-cols-2 lg:grid-rows-2">
+        {EXPERIENCES.map((exp, idx) => (
+          <motion.article
+            key={exp.company}
+            variants={slideIn('down', 'spring', 0.4, 2)}
+            className={`
+              ${idx === 0 && 'lg:col-span-2 lg:row-span-2'}
+            `}
+          >
+            <div className="w-full p-4 space-y-2 text-white border rounded-lg shadow-md sm:space-y-4 md:p-8 bg-primary-semi border-tertiary md:rounded-2xl hover:text-tertiary">
+              <div className="flex flex-col gap-1">
+                <h3 className={`${styles.sectionH3} mb-0 text-inherit`}>
+                  {exp.title} <span>&middot;</span> {exp.company}
+                </h3>
+                <h4 className={`${styles.sectionH4}`}>{exp.date}</h4>
               </div>
+
+              <ul className="flex flex-col gap-2 desc">
+                {exp.description.map((desc) => (
+                  <li
+                    className={`text-white-300 font-para md:tracking-wider sm:text-[0.9375rem] text-[0.8125rem] relative ml-4`}
+                  >
+                    {desc}
+                  </li>
+                ))}
+              </ul>
+              <ul className="flex flex-wrap gap-1">
+                {exp.stack.map((desc) => (
+                  <li
+                    className={`px-2 py-[2px] rounded-xl bg-tertiary-transparent text-[0.75rem] text-tertiary relative`}
+                  >
+                    {desc}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h4 className={`${styles.sectionH4} mb-8`}>Dec 2022 - Present</h4>
-            <ul className="flex flex-col gap-4 desc">
-              <li className={`${styles.sectionText} relative ml-4`}>
-                This internship aims to develop our skills at{' '}
-                <span className="text-white-300">programming foundation </span>{' '}
-                and <span className="text-white-300">web development</span>.
-              </li>
-              <li className={`${styles.sectionText} relative ml-4`}>
-                Through this internship I was able to take courses of over
-                <span className="text-white-300"> 250h </span> of content on
-                these topics:{' '}
-                <div className="flex flex-col gap-1 mt-2 ml-10 sm:ml-16">
-                  {experience.topics.map((item) => (
-                    <span
-                      key={item}
-                      className={`${styles.sectionLi} relative li-span`}
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </li>
-              <li className={`${styles.sectionText} relative ml-4`}>
-                I also had to do 4
-                <span className="text-white-300"> advanced level </span>tasks by
-                myself each focusing on one of these topics:{' '}
-                <div className="grid grid-cols-2 gap-1 mt-2 ml-10 sm:ml-16">
-                  {experience.tasks.map((item) => (
-                    <span
-                      key={item}
-                      className={`${styles.sectionLi} relative li-span`}
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </motion.div>
+          </motion.article>
+        ))}
+      </div>
     </>
   );
 };
@@ -82,6 +58,6 @@ const Experience = () => {
 export default SectionWrapper(
   Experience,
   'experience',
-  `min-h-screen w-full ${styles.padding} 
+  `w-full ${styles.padding} 
 max-w-[clamp(350px,100vw,1500px)] mx-auto`
 );
