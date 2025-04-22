@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 
 import { slideIn } from '../utils/motion';
-import SectionWrapper from './hoc/SectionWrapper';
 
 import AchievementCard from './AchievementCard';
 import Delivery from './icons/Delivery';
