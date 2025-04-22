@@ -33,9 +33,9 @@ const Planet = () => {
             data-name="Path 19"
             d="M400.4,283.954"
             stroke="#fff"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="5.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="5.5"
           />
         </g>
         <g id="Group_21" data-name="Group 21">

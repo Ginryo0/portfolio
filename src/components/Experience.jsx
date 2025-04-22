@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { albonyan } from '../assets';
 import { slideIn, textVariant } from '../utils/motion';
 import { styles } from '../styles';
 import { EXPERIENCES } from '../constants';
