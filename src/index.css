@@ -380,6 +380,7 @@ html::-webkit-scrollbar-track {
   transition: color 0.3s ease;
   z-index: 1;
   overflow: visible;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Pseudo-element that simulates a gradient shadow */
@@ -396,7 +397,7 @@ html::-webkit-scrollbar-track {
   height: 100%;
   border-radius: inherit;
   background: var(--cosmic-dark);
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .cta::before {
