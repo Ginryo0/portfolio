@@ -1,4 +1,4 @@
-import { Github, Live, Folder } from '../icons';
+import { Github, Live, Planet } from '../icons';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../utils/motion';
 import { styles } from '../../styles';
@@ -17,11 +17,11 @@ const AdditionalProject = ({
   return (
     <motion.li
       variants={fadeIn('up', 'spring', 0.05 * idx, 0.5)}
-      className={`${classes.project_card} relative w-full p-8 rounded flex flex-col relative`}
+      className={`${classes.project_card} relative w-full p-8 rounded flex flex-col hover:text-tertiary`}
     >
       <div className={`flex w-full justify-between items-center mb-8`}>
-        <div className="folder">
-          <Folder />
+        <div className="duration-200">
+          <Planet />
         </div>
         <div className="links">
           <div className={`flex justify-end gap-4 mt-3 z-10`}>

@@ -17,7 +17,7 @@ const Project = ({
   return (
     <motion.li
       variants={fadeIn('up', 'spring', 0.5 * idx, 1.5)}
-      className={`${classes.project_item}  rounded w-full mb-16`}
+      className={`${classes.project_item}  rounded w-full`}
     >
       <div
         className={`${classes.project_img} relative rounded overflow-hidden`}

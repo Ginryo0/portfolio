@@ -22,7 +22,7 @@ const Works = () => {
 const WorksSection = SectionWrapper(
   Works,
   'work',
-  `w-full ${styles.paddingX} 
+  `w-full ${styles.padding} 
 max-w-[clamp(350px,100vw,1500px)] mx-auto pt-0`
 );
 export default WorksSection;

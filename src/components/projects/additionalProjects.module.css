@@ -1,6 +1,6 @@
 .project_card {
   /* border: 2px solid var(--purple-main); */
-  background-color: #0b1937;
+  background-color: var(--cosmic-dark-semi);
   transition: 0.4s ease;
 }
 
