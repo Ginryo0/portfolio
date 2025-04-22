@@ -31,14 +31,15 @@
 
 .project_content .project_text {
   background-color: var(--cosmic-dark);
+  transition: box-shadow 200ms ease-in;
 }
 
 .project_content .project_text:hover {
-  box-shadow: 0px 2px 2px #250c313f;
+  box-shadow: 0px 2px 2px #410d9568;
 }
 
 .img_filter {
-  background-color: var(--purple-main);
+  background-color: #410d95c7;
   mix-blend-mode: overlay;
   transition: 0.3s ease-in;
 }
