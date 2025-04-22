@@ -258,7 +258,7 @@ const additionalProjects = [
     live: 'https://appie-gryo.netlify.app/',
     github: 'https://github.com/Ginryo0/Appie',
     paragraph:
-      'Appie is a landing page built with HTML and CSS. It mimics a WordPress theme with a clean layout and was my first project during my internship.',
+      'Appie is a landing page built with HTML and CSS. It mimics a WordPress theme with a clean layout and was my first project during my internship',
 
     tools: ['HTML', 'CSS'],
   },

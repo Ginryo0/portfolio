@@ -1,21 +1,27 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { styles } from '../../styles';
 import classes from './projects.module.css';
 import { Github, Live } from '../icons';
 import { fadeIn } from '../../utils/motion';
+import { useState } from 'react';
 
 const Project = ({
   name,
   live,
   github,
-  paragraph,
-  tools,
-  img,
-  inLink,
+  description,
+  stack,
+  images,
   idx,
 }) => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <motion.li
+      initial="initial"
+      whileHover={'hovered'}
+      onHoverStart={() => setHovered(true)}
+      onHoverEnd={() => setHovered(false)}
       variants={fadeIn('up', 'spring', 0.5 * idx, 1.5)}
       className={`${classes.project_item}  rounded w-full`}
     >
@@ -32,8 +38,31 @@ const Project = ({
             className={`${classes.img_filter} w-full h-full absolute z-20`}
           ></div>
         </a>
-
-        <img src={img}></img>
+        <motion.img
+          src={images[0]}
+          className="object-cover w-full h-full mb-4 rounded"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: hovered ? 0 : 1 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+        />
+        <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
+          <AnimatePresence>
+            {hovered &&
+              images
+                .slice(1)
+                .map((src, index) => (
+                  <motion.img
+                    key={src}
+                    src={src}
+                    className="absolute object-cover w-full h-full rounded"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ delay: (index + 1) * 1.5, duration: 0.5 }}
+                  />
+                ))}
+          </AnimatePresence>
+        </div>
       </div>
       <div className={classes.project_content}>
         <p className={`${styles.projectSubTitle}`}>Featured Project</p>
@@ -43,30 +72,25 @@ const Project = ({
           </a>
         </h3>
         <p className={`${styles.projectP} ${classes.project_text}`}>
-          {paragraph}{' '}
-          {inLink && (
-            <a
-              className={`${styles.projectInLink} link`}
-              href={inLink.link}
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              {inLink.name}
-            </a>
+          {description.map(({ text, highlight }) =>
+            highlight ? (
+              <span className="animated-text">{text}</span>
+            ) : (
+              <>{text}</>
+            )
           )}
-          .
         </p>
         <ul className={`flex justify-end gap-4 mt-4 ${classes.flexed}`}>
-          {tools.map((t) => (
+          {stack.map((t) => (
             <li className={`${styles.projectTools}`} key={t}>
               {t}
             </li>
           ))}
         </ul>
         <div className={`flex justify-end gap-4 mt-3 ${classes.flexed}`}>
-          <a href={github} rel="noreferrer noopener" target="_blank">
+          {!!github && <a href={github} rel="noreferrer noopener" target="_blank">
             <Github />
-          </a>
+          </a>}
           <a href={live} rel="noreferrer noopener" target="_blank">
             <Live />
           </a>
