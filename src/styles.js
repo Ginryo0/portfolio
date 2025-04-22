@@ -13,7 +13,7 @@ const styles = {
     'text-white font-black md:text-[48.83px] sm:text-[42px] xs:text-[36px] text-[30px] sm:mb-24 mb-8',
   sectionSubText:
     'text-tertiary font-para mb-[-3px] sm:text-[1.125rem] text-[0.875rem] uppercase tracking-wider',
-  sectionText: `text-white-200 font-para sm:text-[1.125rem] text-[0.875rem] md:tracking-wider`,
+  sectionText: `text-white-300 font-para sm:text-[1.125rem] text-[0.875rem] md:tracking-wider`,
   sectionH3: ' mb-[5px] sm:text-[1.125rem] sm:tracking-wider font-medium',
   sectionH4:
     'text-white-200 font-para mb-[5px] sm:text-[0.875rem] text-[12px] text-secondary tracking-wider  mt-[-5px]',
