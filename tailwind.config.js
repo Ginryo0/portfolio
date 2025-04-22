@@ -8,13 +8,11 @@ module.exports = {
       colors: {
         primary: 'var(--cosmic-dark)',
         secondary: '#fff',
-        tertiary: '#A166FF',
-        lighter: '#0b1937',
-        'cosmic-blue': '#6A8EFF',
-        'galaxy-purple': '#A166FF',
-        'deep-space': '#0B0C22',
-        'white-200': '#dfe3f1',
-        'white-300': '#bac8f1',
+        tertiary: 'var(--purple-main)',
+        'primary-semi': 'var(--cosmic-dark-semi)',
+        'tertiary-transparent': 'var(--purple-transparent)',
+        'white-200': 'var(--white-200)',
+        'white-300': 'var(--white-300)',
       },
       backdropBlur: {
         xs: '2px',
