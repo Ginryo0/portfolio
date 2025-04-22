@@ -1,5 +1,3 @@
-import { jobify, appie, breakout } from '../assets';
-
 export const navLinks = [
   {
     id: 'about',
@@ -141,7 +139,13 @@ const projects = [
       'AWS',
       'PostgreSQL',
     ],
-    images: [jobify, appie, breakout],
+    images: [
+      '/projects/brainchat/0.png',
+      '/projects/brainchat/1.png',
+      '/projects/brainchat/2.png',
+      '/projects/brainchat/3.png',
+      '/projects/brainchat/4.png',
+    ],
   },
   {
     name: 'Chatio.ai',
@@ -170,7 +174,13 @@ const projects = [
       },
     ],
     stack: ['Next.js', 'Langchain', 'Pinecone', 'Supabase'],
-    images: [jobify, appie, breakout],
+    images: [
+      '/projects/chatio/0.png',
+      '/projects/chatio/1.png',
+      '/projects/chatio/2.png',
+      '/projects/chatio/3.png',
+      '/projects/chatio/4.png',
+    ],
   },
   {
     name: 'Jobify - Job Tracking App',
@@ -191,7 +201,12 @@ const projects = [
       },
     ],
     stack: ['React', 'Node.js', 'MongoDB', 'Styled Components'],
-    images: [jobify, appie, breakout],
+    images: [
+      '/projects/jobify/0.png',
+      '/projects/jobify/1.png',
+      '/projects/jobify/2.png',
+      '/projects/jobify/3.png',
+    ],
   },
   // {
   //   name: 'Appie - Landing Page',

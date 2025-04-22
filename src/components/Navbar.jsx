@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { logo } from '../assets';
 
 import MobNav from './mobnav/MobNav';
 import CTABtn from './mobnav/CTABtn';
@@ -44,7 +43,7 @@ const Navbar = () => {
           }}
         >
           <img
-            src={logo}
+            src={'/logo.svg'}
             ref={logoIcon}
             alt="logo"
             className="object-contain logo w-9 h-9"
