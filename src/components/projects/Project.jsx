@@ -72,7 +72,9 @@ const Project = ({ name, live, github, description, stack, images, idx }) => {
             )
           )}
         </p>
-        <ul className={`flex justify-end gap-4 mt-4 ${classes.flexed}`}>
+        <ul
+          className={`flex flex-wrap justify-end gap-4 mt-4 ${classes.flexed}`}
+        >
           {stack.map((t) => (
             <li className={`${styles.projectTools}`} key={t}>
               {t}
