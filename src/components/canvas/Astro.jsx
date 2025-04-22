@@ -104,10 +104,12 @@ const AstroCanvas = ({ setOnHappy, setOnSad }) => {
       ? 24
       : width > 1200
       ? 18
-      : width > 900
-      ? 12
+      : width > 1000
+      ? 20
+      : width > 819
+      ? 15
       : width > 767
-      ? 8
+      ? 11
       : width > 500
       ? 3
       : 1.8;

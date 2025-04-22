@@ -105,7 +105,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Gin Ryo"
-              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200 placeholder:opacity-50"
             />
           </label>
           <label className="flex flex-col">
@@ -116,7 +116,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="ahmed@gryo.com"
-              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200 placeholder:opacity-50"
             />
           </label>
 
@@ -128,7 +128,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="Type message"
-              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200 placeholder:opacity-50"
             />
           </label>
 
