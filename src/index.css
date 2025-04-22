@@ -27,6 +27,9 @@
   --purple-transparent: rgba(161, 102, 255, 0.1);
   --white-200: #d8cef9;
   --white-300: #f2eeff;
+
+  --toastify-icon-color-success: #1bb388;
+  --toastify-icon-color-error: #d12d52;
 }
 
 * {
@@ -38,6 +41,19 @@
   scroll-behavior: smooth;
   color-scheme: dark;
   /* color: #b4c6d4ab; */
+}
+
+.Toastify__close-button--light {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.Toastify__progress-bar--success {
+  background-color: #6be694;
+}
+
+.Toastify__progress-bar--error {
+  background-color: #e66b6b;
 }
 
 .radial-gradient {
@@ -563,47 +579,6 @@ ul.desc li::before {
   font-size: 18px;
 }
 
-/* form alert style */
-.alert {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translateY(400%);
-  width: 100%;
-  z-index: 4;
-  border-radius: 2px;
-  padding: 1rem;
-  background-color: #0b0c2263;
-  backdrop-filter: blur(10px);
-  opacity: 0;
-  animation: alert 2s ease-out 1 forwards;
-}
-
-.alert_success {
-  color: #6be694;
-  border: 2px solid #6be694;
-}
-
-.alert_error {
-  color: #e66b6b;
-  border: 2px solid #e66b6b;
-}
-
-@keyframes alert {
-  0% {
-    opacity: 0;
-    /* transform: translateY(-50%); */
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    /* transform: translateY(400%); */
-  }
-}
 
 /* footer */
 .footer {
