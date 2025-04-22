@@ -6,9 +6,9 @@ const styles = {
   heroHeadText:
     'font-bold text-tertiary text-[clamp(2rem,1.4rem+3.2vw,5.2rem)]',
   heroSubHead:
-    'font-[400] text-[clamp(1.125rem,1.05rem+0.375vw,1.5rem)] lg:mb-4 mb-2 text-[#e5e5e5]',
+    'font-[400] text-[clamp(1.125rem,1.05rem+0.375vw,1.5rem)] lg:mb-4 mb-2 text-white-200',
   heroSubText:
-    'font-[500] text-white text-[clamp(1.125rem,1.05rem+0.375vw,1.5rem)] ',
+    'font-[500] text-white-300 text-[clamp(1.125rem,1.05rem+0.375vw,1.5rem)] ',
   sectionHeadText:
     'text-white font-black md:text-[48.83px] sm:text-[42px] xs:text-[36px] text-[30px] sm:mb-24 mb-8',
   sectionSubText:
