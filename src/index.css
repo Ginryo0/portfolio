@@ -22,7 +22,11 @@
   );
 
   --cosmic-dark: #120d26;
+  --cosmic-dark-semi: #120d26d3;
   --purple-main: #a166ff;
+  --purple-transparent: rgba(161, 102, 255, 0.05);
+  --white-200: #d8cef9;
+  --white-300: #f2eeff;
 }
 
 * {
@@ -135,12 +139,6 @@ html::-webkit-scrollbar-track {
 
 .icon_filled:hover path {
   fill: var(--purple-main);
-}
-.folder {
-  width: 40px;
-  height: 40px;
-  stroke: var(--purple-main);
-  stroke-width: 1px;
 }
 
 @media (min-width: 450px) {
@@ -398,6 +396,7 @@ html::-webkit-scrollbar-track {
   height: 100%;
   border-radius: inherit;
   background: var(--cosmic-dark);
+  transition: transform 0.23s ease;
 }
 
 .cta::before {
@@ -433,8 +432,9 @@ html::-webkit-scrollbar-track {
 }
 
 /* On hover: show the gradient shadow underneath the button */
-.cta:hover::before {
-  transform: translate(6%, 12%);
+.cta:hover::after,
+.cta:hover .cta-border {
+  transform: translate(-3.5%, -10%);
 }
 
 /* tech section sliders */
@@ -544,7 +544,7 @@ html::-webkit-scrollbar-track {
   font-size: 20px;
 }
 
-.exp .desc li::before {
+ul.desc li::before {
   content: '▹';
   display: block;
   position: absolute;
