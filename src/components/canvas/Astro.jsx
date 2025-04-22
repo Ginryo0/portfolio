@@ -54,7 +54,7 @@ const Astro = ({ setOnSad, setOnHappy }) => {
       mass: 15,
       tension: 25,
       friction: 15,
-      duration: isMobile ? 2000 : 3000,
+      duration: 3000,
     },
     from: {
       position: [-xPos, -1.5, 0],
@@ -104,10 +104,12 @@ const AstroCanvas = ({ setOnHappy, setOnSad }) => {
       ? 24
       : width > 1200
       ? 18
-      : width > 800
+      : width > 900
       ? 12
+      : width > 767
+      ? 8
       : width > 500
-      ? 2
+      ? 3
       : 1.8;
 
   return (
