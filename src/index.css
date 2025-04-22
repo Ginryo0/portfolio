@@ -22,9 +22,9 @@
   );
 
   --cosmic-dark: #120d26;
-  --cosmic-dark-semi: #120d26d3;
+  --cosmic-dark-semi: rgba(18, 13, 38, 0.6);
   --purple-main: #a166ff;
-  --purple-transparent: rgba(161, 102, 255, 0.05);
+  --purple-transparent: rgba(161, 102, 255, 0.1);
   --white-200: #d8cef9;
   --white-300: #f2eeff;
 }
