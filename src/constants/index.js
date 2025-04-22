@@ -1,15 +1,4 @@
-import {
-  javascript,
-  html,
-  css,
-  reactjs,
-  nodejs,
-  mongodb,
-  git,
-  jobify,
-  appie,
-  breakout,
-} from '../assets';
+import { jobify, appie, breakout } from '../assets';
 
 export const navLinks = [
   {
@@ -29,28 +18,23 @@ export const navLinks = [
 const tech = [
   {
     name: 'Next.JS',
-    icon: nodejs,
     color: '#21a366',
   },
   {
     name: 'React',
-    icon: reactjs,
     color: '#53c1de',
   },
 
   {
     name: 'Node.JS',
-    icon: nodejs,
     color: '#21a366',
   },
   {
     name: 'Tailwind',
-    icon: nodejs,
     color: '#21a366',
   },
   {
     name: 'Redux',
-    icon: nodejs,
     color: '#21a366',
   },
 ];
