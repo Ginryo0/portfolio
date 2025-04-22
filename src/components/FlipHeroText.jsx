@@ -40,6 +40,7 @@ const FlipHeroText = ({ children, href }) => {
           );
         })}
       </div>
+      {/* This styling creates an empty container above the text with its content hidden below the original text */}
       <div className="absolute inset-0">
         {children.split('').map((l, i) => {
           if (l === ' ') {
