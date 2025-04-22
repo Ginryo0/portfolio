@@ -28,7 +28,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setAlert('success');
     setTimeout(() => {
       setAlert('');
     }, 4000);
@@ -47,7 +46,7 @@ const Contact = () => {
       }, 2000);
       return;
     }
-    setLoading(true);
+
     emailjs
       .send(
         import.meta.env.VITE_SERVICE_ID,
@@ -106,7 +105,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Gin Ryo"
-              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-lighter font-para placeholder:text-white-200"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200"
             />
           </label>
           <label className="flex flex-col">
@@ -117,7 +116,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="ahmed@gryo.com"
-              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-lighter font-para placeholder:text-white-200"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200"
             />
           </label>
 
@@ -129,7 +128,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="Type message"
-              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-lighter font-para placeholder:text-white-200"
+              className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200"
             />
           </label>
 
@@ -138,9 +137,10 @@ const Contact = () => {
               type="submit"
               className="px-8 py-3 cta w-fit"
               disabled={loading}
-              data-text={loading ? 'Sending...' : 'Say Hello'}
+              data-text={loading ? 'Thanks 😊' : 'Say Hello'}
             >
-              {loading ? 'Sending...' : 'Say Hello'}
+              {loading ? 'Thanks 😊' : 'Say Hello'}
+              <div className="cta-border"></div>
             </button>
             <Socials />
           </div>
