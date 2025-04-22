@@ -27,21 +27,6 @@ export const navLinks = [
 ];
 
 const tech = [
-  // {
-  //   name: 'HTML 5',
-  //   icon: html,
-  //   color: '#ff6d00',
-  // },
-  // {
-  //   name: 'CSS 3',
-  //   icon: css,
-  //   color: '#039be5',
-  // },
-  // {
-  //   name: 'JavaScript',
-  //   icon: javascript,
-  //   color: '#ffd600',
-  // },
   {
     name: 'Next.JS',
     icon: nodejs,
@@ -58,7 +43,6 @@ const tech = [
     icon: nodejs,
     color: '#21a366',
   },
-
   {
     name: 'Tailwind',
     icon: nodejs,
@@ -69,27 +53,52 @@ const tech = [
     icon: nodejs,
     color: '#21a366',
   },
-  // {
-  //   name: 'MongoDB',
-  //   icon: mongodb,
-  //   color: '#4caf50',
-  // },
-  // {
-  //   name: 'git',
-  //   icon: git,
-  //   color: '#f4511e',
-  // },
 ];
 
-const experience = {
-  topics: [
-    'Programming Foundation, Git & Github',
-    'HTML, CSS & JS(ES6)',
-    'React JS, Node JS, MongoDB',
-    'AWS & Serverless Functions',
-  ],
-  tasks: ['HTML & CSS', 'Javascript', 'React JS', 'Node JS'],
-};
+const EXPERIENCES = [
+  {
+    title: 'Full-Stack Developer',
+    company: 'Magic Apps AI',
+    date: 'May 2023 - Present (Contract)',
+    description: [
+      'Built and maintained 4 AI-powered SaaS apps over 2 years, handling full-stack development, performance tuning, and feature delivery across a remote team.',
+      'Developed BrainChat.ai from scratch — a multi-agent AI chat platform supporting OpenAI, Gemini, Claude, Mistral, with tools like image generation, web search, and data analysis.',
+      'Created Chatio.ai, a chatbot builder for websites that generates knowledge bases from crawled content.',
+      'Contributed to WebMagic.ai and EmailMagic.ai, AI-based Chrome extensions with supporting web apps and dashboards for content summarization and user management.',
+    ],
+    stack: [
+      'Next.js',
+      'Node.js',
+      'Langchain',
+      'PostgreSQL',
+      'AWS',
+      'Redux',
+      'Tailwind',
+      'ShadCN',
+    ],
+  },
+  {
+    title: 'Frontend Web Developer',
+    company: 'Quran Tab',
+    date: 'Nov 2023 – Present (Seasonal)',
+    description: [
+      'Enhanced Quranic translation API for real-time accuracy.',
+      'Developed an accessible user interface for translations.',
+      'Implemented end-to-end tests for cross-browser stability.',
+    ],
+    stack: ['React', 'SCSS', 'Playwright', 'Chakra UI', 'TypeScript'],
+  },
+  {
+    title: 'Software Engineer Intern',
+    company: 'Kalbonyan Elmarsos',
+    date: 'Dec 2022 – Jul 2023',
+    description: [
+      'Completed an extensive internship covering modern web development technologies and tools.',
+      'Built multiple projects showcasing full-stack skills, emphasizing frontend-backend synergy.',
+    ],
+    stack: ['React', 'Node.js', 'CSS', 'MongoDB', 'AWS', 'Styled Components'],
+  },
+];
 
 const projects = [
   {
@@ -201,4 +210,4 @@ const additionalProjects = [
   // },
 ];
 
-export { tech, experience, projects, additionalProjects };
+export { tech, EXPERIENCES, projects, additionalProjects };
