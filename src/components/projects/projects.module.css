@@ -38,7 +38,7 @@
 }
 
 .img_filter {
-  background-color: #664097;
+  background-color: var(--purple-main);
   mix-blend-mode: overlay;
   transition: 0.3s ease-in;
 }

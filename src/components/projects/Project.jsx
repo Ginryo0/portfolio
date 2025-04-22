@@ -5,15 +5,7 @@ import { Github, Live } from '../icons';
 import { fadeIn } from '../../utils/motion';
 import { useState } from 'react';
 
-const Project = ({
-  name,
-  live,
-  github,
-  description,
-  stack,
-  images,
-  idx,
-}) => {
+const Project = ({ name, live, github, description, stack, images, idx }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -40,7 +32,7 @@ const Project = ({
         </a>
         <motion.img
           src={images[0]}
-          className="object-cover w-full h-full mb-4 rounded"
+          className="object-cover w-full h-full rounded"
           initial={{ opacity: 1 }}
           animate={{ opacity: hovered ? 0 : 1 }}
           transition={{ duration: 0.5, delay: 1.5 }}
@@ -88,9 +80,11 @@ const Project = ({
           ))}
         </ul>
         <div className={`flex justify-end gap-4 mt-3 ${classes.flexed}`}>
-          {!!github && <a href={github} rel="noreferrer noopener" target="_blank">
-            <Github />
-          </a>}
+          {!!github && (
+            <a href={github} rel="noreferrer noopener" target="_blank">
+              <Github />
+            </a>
+          )}
           <a href={live} rel="noreferrer noopener" target="_blank">
             <Live />
           </a>
