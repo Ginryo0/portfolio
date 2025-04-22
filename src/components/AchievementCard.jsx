@@ -8,9 +8,9 @@ const AchievementCard = ({ icon, value, label }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="flex items-center gap-4 p-4 border shadow-md bg-primary border-tertiary rounded-2xl md:w-[clamp(212px,20vw,240px)] w-full text-white hover:text-tertiary"
+      className="flex items-center gap-4 p-4 border shadow-md bg-primary-semi border-tertiary rounded-2xl md:w-[clamp(212px,20vw,240px)] w-full text-white hover:text-tertiary"
     >
-      <div className="p-3 duration-100 rounded-full text-inherit bg-white/[0.02]">
+      <div className="p-3 duration-100 rounded-full text-inherit bg-tertiary-transparent ">
         {icon}
       </div>
       <div className="flex flex-col items-center w-full gap-[2px]">

@@ -9,12 +9,11 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()} className="md:col-span-2">
-        {/* <img src={astro} style={{ opacity: '0.5', width: '20%' }} /> */}
         <p className={`${styles.sectionSubText} `}>Overview</p>
         <h2 className={styles.sectionHeadText}>About</h2>
       </motion.div>
       <div className="grid items-center justify-between grid-cols-1 gap-4 md:grid-cols-3 lg:gap-8 md:gap-1">
-        <motion.div
+        <motion.article
           variants={slideIn('left', 'spring', 0.2, 2)}
           className="flex flex-col gap-8 md:col-span-2"
         >
@@ -33,7 +32,7 @@ const About = () => {
             <span className="animated-text">forward-thinking</span> web apps
             that feel as good as they function.
           </p>
-        </motion.div>
+        </motion.article>
 
         <Achievements />
       </div>
