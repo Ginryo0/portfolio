@@ -6,76 +6,73 @@ import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import SectionWrapper from './hoc/SectionWrapper';
 import { slideIn } from '../utils/motion';
-import Alert from './Alert';
 import Socials from './Socials';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
     email: '',
-    subject: 'Portfolio Mail',
     message: '',
   });
   const [loading, setLoading] = useState(false);
-  const [alert, setAlert] = useState('');
-  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
+  const notify = ({ type, message }) =>
+    toast(message, {
+      type: type,
+      className: 'bg-primary-semi border border-tertiary text-inherit',
+      progressClassName: 'bg-tertiary',
+    });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTimeout(() => {
-      setAlert('');
-    }, 4000);
     if (
       !form.name ||
       !form.email ||
       !form.message ||
-      !form.subject ||
       !form.email.includes('@')
     ) {
-      setError('Please fill all fields with valid values.');
-      setAlert('error');
-      setTimeout(() => {
-        setAlert('');
-        setError('');
-      }, 2000);
+      notify({
+        type: 'error',
+        message: 'Please fill all fields with valid values.',
+      });
+
       return;
     }
-
+    setLoading(true);
     emailjs
       .send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         {
-          from_name: form.name,
-          to_name: 'Ahmed',
-          from_email: form.email,
-          to_email: 'ginryoix@gmail.com',
-          subject: form.subject,
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
-        () => {
+        (n) => {
           setLoading(false);
-          setAlert('success');
-          setTimeout(() => {
-            setAlert('');
-          }, 2000);
+          notify({
+            type: 'success',
+            message: 'Thank you. I will get back to you as soon as possible.',
+          });
         },
         (error) => {
           setLoading(false);
-          console.log(error);
-          setAlert('error');
-          setTimeout(() => {
-            setAlert('');
-          }, 2000);
+          notify({
+            type: 'error',
+            message:
+              error.text ||
+              'Error occurred. Try contacting me via email or other methods.',
+          });
         }
       );
   };
@@ -88,8 +85,6 @@ const Contact = () => {
         variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] relative bg-transparent border-tertiary border-2 p-8 rounded-lg"
       >
-        {alert && <Alert state={alert} error={error}></Alert>}
-
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={`${styles.sectionHeadText} sm:mb-12`}>Contact</h3>
         <form
@@ -137,9 +132,9 @@ const Contact = () => {
               type="submit"
               className="px-8 py-3 cta w-fit"
               disabled={loading}
-              data-text={loading ? 'Thanks 😊' : 'Say Hello'}
+              data-text={loading ? 'Sending..😊' : 'Say Hello'}
             >
-              {loading ? 'Thanks 😊' : 'Say Hello'}
+              {loading ? 'Sending..😊' : 'Say Hello'}
               <div className="cta-border"></div>
             </button>
             <Socials />
