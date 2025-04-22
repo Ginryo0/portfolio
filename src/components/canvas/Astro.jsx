@@ -46,7 +46,6 @@ const Astro = ({ setOnSad, setOnHappy }) => {
     }
   }, [isSadFace]);
 
-  // Floating animation
   // Spring animation for floating effect
   const { position, rotation } = useSpring({
     loop: true,

@@ -3,7 +3,7 @@ import { styles } from '../../styles';
 import classes from './projects.module.css';
 import { Github, Live } from '../icons';
 import { fadeIn } from '../../utils/motion';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const Project = ({ name, live, github, description, stack, images, idx }) => {
   const [hovered, setHovered] = useState(false);
@@ -35,6 +35,7 @@ const Project = ({ name, live, github, description, stack, images, idx }) => {
           className="object-cover w-full h-full rounded"
           initial={{ opacity: 1 }}
           animate={{ opacity: hovered ? 0 : 1 }}
+          alt={'Showcase of project: ' + name}
           transition={{ duration: 0.5, delay: 1.5 }}
         />
         <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
@@ -46,6 +47,7 @@ const Project = ({ name, live, github, description, stack, images, idx }) => {
                   <motion.img
                     key={src}
                     src={src}
+                    alt={'Showcase of project: ' + name}
                     className="absolute object-cover w-full h-full rounded"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -64,11 +66,13 @@ const Project = ({ name, live, github, description, stack, images, idx }) => {
           </a>
         </h3>
         <p className={`${styles.projectP} ${classes.project_text}`}>
-          {description.map(({ text, highlight }) =>
+          {description.map(({ text, highlight }, idx) =>
             highlight ? (
-              <span className="animated-text">{text}</span>
+              <span className="animated-text" key={idx}>
+                {text}
+              </span>
             ) : (
-              <>{text}</>
+              <React.Fragment key={idx}>{text}</React.Fragment>
             )
           )}
         </p>

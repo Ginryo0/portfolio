@@ -29,20 +29,22 @@ const Experience = () => {
               </div>
 
               <ul className="flex flex-col gap-2 desc">
-                {exp.description.map((desc) => (
+                {exp.description.map((desc, idx) => (
                   <li
                     className={`text-white-300 font-para md:tracking-wider sm:text-[0.9375rem] text-[0.8125rem] relative ml-4`}
+                    key={idx}
                   >
                     {desc}
                   </li>
                 ))}
               </ul>
               <ul className="flex flex-wrap gap-1">
-                {exp.stack.map((desc) => (
+                {exp.stack.map((tech) => (
                   <li
                     className={`px-2 py-[2px] rounded-xl bg-tertiary-transparent text-[0.75rem] text-tertiary relative`}
+                    key={idx}
                   >
-                    {desc}
+                    {tech}
                   </li>
                 ))}
               </ul>
