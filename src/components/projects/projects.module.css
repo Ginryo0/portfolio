@@ -49,11 +49,11 @@
   transition: 0.3s ease-in;
 }
 
-.project_img:hover .img_filter {
+.project_item:hover .img_filter {
   opacity: 0;
 }
 
-.project_img:hover img {
+.project_item:hover img {
   filter: none;
 }
 

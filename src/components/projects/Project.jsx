@@ -5,17 +5,27 @@ import { Github, Live } from '../icons';
 import { fadeIn } from '../../utils/motion';
 import React, { useState } from 'react';
 
-const Project = ({ name, live, github, description, stack, images, idx }) => {
+const Project = ({
+  name,
+  live,
+  github,
+  description,
+  stack,
+  images,
+  idx,
+  key,
+}) => {
   const [hovered, setHovered] = useState(false);
 
   return (
     <motion.li
-      initial="initial"
-      whileHover={'hovered'}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
+      onTouchStart={() => setHovered(true)}
+      onTouchEnd={() => setHovered(false)}
       variants={fadeIn('up', 'spring', 0.5 * idx, 1.5)}
       className={`${classes.project_item}  rounded w-full`}
+      key={key}
     >
       <div
         className={`${classes.project_img} relative rounded overflow-hidden`}
@@ -30,31 +40,30 @@ const Project = ({ name, live, github, description, stack, images, idx }) => {
             className={`${classes.img_filter} w-full h-full absolute z-20`}
           ></div>
         </a>
+
         <motion.img
           src={images[0]}
           className="object-cover w-full h-full rounded"
           initial={{ opacity: 1 }}
           animate={{ opacity: hovered ? 0 : 1 }}
           alt={'Showcase of project: ' + name}
-          transition={{ duration: 0.5, delay: 1.5 }}
+          transition={{ duration: 0.3, delay: 0 }}
         />
         <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
           <AnimatePresence>
             {hovered &&
-              images
-                .slice(1)
-                .map((src, index) => (
-                  <motion.img
-                    key={src}
-                    src={src}
-                    alt={'Showcase of project: ' + name}
-                    className="absolute object-cover w-full h-full rounded"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ delay: (index + 1) * 1.5, duration: 0.5 }}
-                  />
-                ))}
+              images.map((src, index) => (
+                <motion.img
+                  key={src}
+                  src={src}
+                  alt={'Showcase of project: ' + name}
+                  className="absolute object-cover w-full h-full rounded"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ delay: index * 1.5, duration: 0.3 }}
+                />
+              ))}
           </AnimatePresence>
         </div>
       </div>
