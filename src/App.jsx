@@ -4,7 +4,6 @@ import {
   Hero,
   Navbar,
   About,
-  Achievements,
   Experience,
   Works,
   Contact,
@@ -13,8 +12,9 @@ import {
   AdditionalWorks,
 } from './components';
 
-import { styles } from './styles';
 import TechSlider from './components/TechSlider';
+import { ToastContainer } from 'react-toastify';
+
 const App = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -30,6 +30,8 @@ const App = () => {
         <>
           <Navbar />
           <div className="relative z-0 overflow-x-hidden bg-primary isolate">
+            <ToastContainer />
+
             <div className="fixed top-0 z w-[clamp(500px,120vw,1200px)] aspect-square bg-gradient-radial-2 opacity-30 rounded-full blur-[5vw] animate-blob1"></div>
             <StarsCanvas />
             <Hero />
