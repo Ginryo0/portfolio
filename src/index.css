@@ -68,7 +68,7 @@
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   background-size: 200% auto;
-  animation: textShine 2s 4s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite alternate;
+  animation: textShine 2s 4s ease-out infinite alternate;
 }
 
 @keyframes textShine {
@@ -105,7 +105,7 @@
 }
 
 .animate-blob1 {
-  animation: blob1 12s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite;
+  animation: blob1 12s ease-out infinite;
   top: 50%;
   left: 50%;
 }
@@ -431,7 +431,7 @@ html::-webkit-scrollbar-track {
   transition: transform 0.3s ease;
   background-size: 200% auto;
 
-  animation: textShine 2s 4s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite alternate;
+  animation: textShine 2s 4s ease-out infinite alternate;
 }
 
 .cta-border {
@@ -446,7 +446,7 @@ html::-webkit-scrollbar-track {
   background-size: 200% auto;
 
   transition: transform 0.3s ease;
-  animation: textShine 2s 4s cubic-bezier(0.8, 0.5, 0.5, 0.8) infinite alternate;
+  animation: textShine 2s 4s ease-out infinite alternate;
 }
 
 /* On hover: show the gradient shadow underneath the button */
