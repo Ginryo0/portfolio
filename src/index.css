@@ -9,10 +9,11 @@
 :root {
   --text-gradient: linear-gradient(
     90deg,
-    var(--purple-main) 0%,
-    #8d66ff 30%,
-    #7b66ff 60%,
-    #9966ff 100%
+    #7048e8,
+    #a166ff,
+    #8d66ff,
+    #4c35de,
+    #6b90ff
   );
   --space-gradient: radial-gradient(
     circle at 30% 30%,
@@ -578,7 +579,6 @@ ul.desc li::before {
   color: var(--purple-main);
   font-size: 18px;
 }
-
 
 /* footer */
 .footer {
