@@ -201,6 +201,19 @@ html::-webkit-scrollbar-track {
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(2px);
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+}
+
 /* canvas- loader */
 .spinner {
   width: 8px;
@@ -309,6 +322,9 @@ html::-webkit-scrollbar-track {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  /* Optical align   */
+  margin-right: -15px;
 }
 
 .menu-btn span {
