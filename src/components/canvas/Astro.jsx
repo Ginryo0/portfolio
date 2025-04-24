@@ -14,6 +14,10 @@ const Astro = ({ setOnSad, setOnHappy }) => {
   const { isMobile, windowDimensions } = useWindowDimensions();
   const [isSadFace, setIsSadFace] = useState(false);
   const faceRef = useRef();
+  const soundEffects = [
+    new Audio('/sounds/pep.ogg'),
+    new Audio('/sounds/tone.ogg'),
+  ];
 
   const xPos = (windowDimensions.width / 1920) * 0.3;
 
@@ -22,7 +26,12 @@ const Astro = ({ setOnSad, setOnHappy }) => {
       faceRef.current.material.map = face;
     }, 200);
     if (face == sadFace) {
+      soundEffects[1].volume = 0.2;
+      soundEffects[1].play();
       setIsSadFace(true);
+    } else if (face == happyFace) {
+      soundEffects[0].volume = 0.2;
+      soundEffects[0].play();
     }
   };
 

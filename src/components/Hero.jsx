@@ -31,8 +31,10 @@ const Hero = () => {
               </h2>
               <FlipHeroText>Web Developer</FlipHeroText>
               <h2 className={`${styles.heroSubHead} text-white-200`}>
-                I build fast, beautiful, and user-focused websites that help
-                brands shine online.
+                I build thoughtful, high-quality web experiences that blend form
+                and function.
+                <br />
+                Clean design and seamless functionality guide every decision.
                 <br /> Let’s bring your vision to life — one pixel at a time.
               </h2>
               <div className="mt-4 xs:text-[16px] flex flex-col items-start sm:gap-8 gap-4 justify-start max-w-fit">
@@ -54,6 +56,8 @@ const Hero = () => {
 
       <div className="absolute flex items-center justify-center w-full md:hidden xs:bottom-10 bottom-20 ">
         <a href="#about">
+          <span className="sr-only">About Section</span>
+
           <div className="flex items-start justify-center w-6 h-12 p-2 border-2 rounded-2xl border-white-200">
             <motion.div
               animate={{
