@@ -5,16 +5,7 @@ import { Github, Live } from '../icons';
 import { fadeIn } from '../../utils/motion';
 import React, { useState } from 'react';
 
-const Project = ({
-  name,
-  live,
-  github,
-  description,
-  stack,
-  images,
-  idx,
-  key,
-}) => {
+const Project = ({ name, live, github, description, stack, images, idx }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -25,7 +16,6 @@ const Project = ({
       onTouchEnd={() => setHovered(false)}
       variants={fadeIn('up', 'spring', 0.5 * idx, 1.5)}
       className={`${classes.project_item}  rounded w-full`}
-      key={key}
     >
       <div
         className={`${classes.project_img} relative rounded overflow-hidden`}
@@ -36,6 +26,8 @@ const Project = ({
           rel="noreferrer noopener"
           target="_blank"
         >
+          <span className="sr-only">{name}</span>
+
           <div
             className={`${classes.img_filter} w-full h-full absolute z-20`}
           ></div>

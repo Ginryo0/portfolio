@@ -4,6 +4,7 @@ const MenuBtn = ({ toggle, onClick }) => {
       <span></span>
       <span></span>
       <span></span>
+      <span className="sr-only">Navigation Menu</span>
     </button>
   );
 };

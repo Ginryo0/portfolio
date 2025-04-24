@@ -1,4 +1,4 @@
-import { Github, Mail, LinkedIn } from './icons';
+import { Github, Telegram, LinkedIn } from './icons';
 const Socials = ({ className }) => {
   return (
     <ul className={`flex gap-3 items-center sm:ml-0 ml-2 ${className}`}>
@@ -8,6 +8,7 @@ const Socials = ({ className }) => {
           rel="noreferrer noopener"
           target="_blank"
         >
+          <span className="sr-only">Linkedin</span>
           <LinkedIn />
         </a>
       </li>
@@ -17,12 +18,18 @@ const Socials = ({ className }) => {
           rel="noreferrer noopener"
           target="_blank"
         >
+          <span className="sr-only">Github</span>
           <Github />
         </a>
       </li>
       <li>
-        <a href="mailto:ginryoix@gmail.com">
-          <Mail />
+        <a
+          href="https://t.me/aszgryo"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          <span className="sr-only">Mail</span>
+          <Telegram className={className} />
         </a>
       </li>
     </ul>
