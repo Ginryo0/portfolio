@@ -1,20 +1,19 @@
 const CTABtn = ({ className, ...props }) => {
   return (
-    <div
+    <a
       className={`cta  px-4 py-2 ${className}`}
-      data-text="Hire me"
+      data-text="Get in touch"
+      href="mailto:aszgryo@gmail.com"
       {...props}
     >
-      <a
+      <span
         className={`inline-block `}
         href="https://www.linkedin.com/in/ahmed-samy-zeid/"
-        rel="noreferrer noopener"
-        target="_blank"
       >
-        Hire me
-      </a>
+        Get in touch
+      </span>
       <div className="cta-border"></div>
-    </div>
+    </a>
   );
 };
 export default CTABtn;
