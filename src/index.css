@@ -67,7 +67,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
-  background-size: 200% auto;
+  background-size: 250% auto;
   animation: textShine 2s 4s ease-out infinite alternate;
 }
 

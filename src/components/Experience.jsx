@@ -39,7 +39,7 @@ const Experience = () => {
                 ))}
               </ul>
               <ul className="flex flex-wrap gap-1">
-                {exp.stack.map((tech) => (
+                {exp.stack.map((tech, idx) => (
                   <li
                     className={`px-2 py-[2px] rounded-xl bg-tertiary-transparent text-[0.75rem] text-tertiary relative`}
                     key={idx}

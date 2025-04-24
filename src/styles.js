@@ -6,7 +6,7 @@ const styles = {
   heroHeadText:
     'font-bold text-tertiary text-[clamp(2rem,1.4rem+3.2vw,5.2rem)]',
   heroSubHead:
-    'font-[400] text-[clamp(1.125rem,1.05rem+0.375vw,1.5rem)] lg:mb-4 mb-2 text-white-200',
+    'font-[400] text-[clamp(1rem,0.925rem+0.375vw,1.375rem)] lg:mb-4 mb-2 text-white-200',
   heroSubText:
     'font-[500] text-white-300 text-[clamp(1.125rem,1.05rem+0.375vw,1.5rem)] ',
   sectionHeadText:

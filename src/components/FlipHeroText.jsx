@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 
-const DURATION = 0.25;
-const STAGGER = 0.025;
+const DURATION = 0.5;
+const STAGGER = 0.05;
 
-const FlipHeroText = ({ children, href }) => {
+const FlipHeroText = ({ children }) => {
   return (
     <motion.h1
       initial="initial"
-      whileHover="hovered"
+      animate="animate"
       className={`${styles.heroHeadText} relative block uppercase whitespace-nowrap overflow-hidden text-white sm:leading-[0.8]`}
     >
       <div>
@@ -23,7 +23,7 @@ const FlipHeroText = ({ children, href }) => {
                 initial: {
                   y: 0,
                 },
-                hovered: {
+                animate: {
                   y: '-100%',
                 },
               }}
@@ -31,6 +31,8 @@ const FlipHeroText = ({ children, href }) => {
                 duration: DURATION,
                 ease: 'easeInOut',
                 delay: STAGGER * i,
+                repeat: 'Infinity',
+                repeatDelay: 5,
               }}
               className="inline-block"
               key={i}
@@ -52,7 +54,7 @@ const FlipHeroText = ({ children, href }) => {
                 initial: {
                   y: '100%',
                 },
-                hovered: {
+                animate: {
                   y: 0,
                 },
               }}
@@ -60,6 +62,8 @@ const FlipHeroText = ({ children, href }) => {
                 duration: DURATION,
                 ease: 'easeInOut',
                 delay: STAGGER * i,
+                repeat: 'Infinity',
+                repeatDelay: 5,
               }}
               className="inline-block"
               key={i}
