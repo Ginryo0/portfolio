@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 
-const DURATION = 0.5;
-const STAGGER = 0.05;
+const DURATION = 0.35;
+const STAGGER = 0.035;
 
 const FlipHeroText = ({ children }) => {
   return (
@@ -32,7 +32,7 @@ const FlipHeroText = ({ children }) => {
                 ease: 'easeInOut',
                 delay: STAGGER * i,
                 repeat: 'Infinity',
-                repeatDelay: 5,
+                repeatDelay: 2,
               }}
               className="inline-block"
               key={i}
@@ -63,7 +63,7 @@ const FlipHeroText = ({ children }) => {
                 ease: 'easeInOut',
                 delay: STAGGER * i,
                 repeat: 'Infinity',
-                repeatDelay: 5,
+                repeatDelay: 2,
               }}
               className="inline-block"
               key={i}
