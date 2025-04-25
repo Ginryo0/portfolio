@@ -22,17 +22,18 @@ const Astro = ({ setOnSad, setOnHappy }) => {
   const xPos = (windowDimensions.width / 1920) * 0.3;
 
   const changeFace = (face) => {
-    setTimeout(() => {
+    const t = setTimeout(() => {
       faceRef.current.material.map = face;
-    }, 200);
-    if (face == sadFace) {
-      soundEffects[1].volume = 0.2;
-      soundEffects[1].play();
-      setIsSadFace(true);
-    } else if (face == happyFace) {
-      soundEffects[0].volume = 0.2;
-      soundEffects[0].play();
-    }
+      if (face == sadFace) {
+        soundEffects[1].volume = 0.2;
+        soundEffects[1].play();
+        setIsSadFace(true);
+      } else if (face == happyFace) {
+        soundEffects[0].volume = 0.2;
+        soundEffects[0].play();
+      }
+    }, 300);
+    return () => clearTimeout(t);
   };
 
   useEffect(() => {
