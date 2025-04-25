@@ -31,6 +31,7 @@ const Astro = ({ setOnSad, setOnHappy }) => {
       } else if (face == happyFace) {
         soundEffects[0].volume = 0.2;
         soundEffects[0].play();
+        setIsSadFace(false);
       }
     }, 300);
     return () => clearTimeout(t);
@@ -48,12 +49,14 @@ const Astro = ({ setOnSad, setOnHappy }) => {
   }, [astro]);
 
   useEffect(() => {
+    let t;
     if (isSadFace) {
-      setTimeout(() => {
+      t = setTimeout(() => {
         changeFace(normalFace);
         setIsSadFace(false);
       }, 1500);
     }
+    return () => clearTimeout(t);
   }, [isSadFace]);
 
   // Spring animation for floating effect
